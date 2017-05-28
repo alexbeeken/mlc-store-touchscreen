@@ -1,13 +1,17 @@
 .index-links {
+  background-color: #123247;
   height: 1050px;
-  width: 1400px;
   padding: 100px;
+  width: 1400px;
 }
 
 .title-box {
+  background-color: #607293;
+  border: 2px solid black;
+  border-radius: 10px;
+  height: 20%;
   text-align: center;
   vertical-align: center;
-  height: 20%;
 }
 
 .touch-links {
@@ -15,10 +19,11 @@
 }
 
 .touch-box {
-  height: 50%;
-  width: 31%;
+  background-color: #607293;
   border: 2px solid black;
   border-radius: 10px;
-  margin: 10px;
+  height: 50%;
   float: left;
+  margin: 10px;
+  width: 31%;
 }
