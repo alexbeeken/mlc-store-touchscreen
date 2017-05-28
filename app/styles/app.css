@@ -8,20 +8,25 @@
 .title-box {
   background-color: #607293;
   border: 2px solid black;
-  border-radius: 10px;
+  border-radius: 30px;
   height: 20%;
   text-align: center;
-  vertical-align: center;
+}
+
+.title {
+  padding-top: 15px;
+  font-size: 100px;
 }
 
 .touch-links {
   height: 70%;
+  margin-top: 30px;
 }
 
 .touch-box {
   background-color: #607293;
   border: 2px solid black;
-  border-radius: 10px;
+  border-radius: 30px;
   height: 50%;
   float: left;
   margin: 10px;
