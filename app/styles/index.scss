@@ -1,12 +1,18 @@
+$color1: #5D737E;
+$color2: #64B6AC;
+$color3: #C0FDFB;
+$color4: #DAFFEF;
+$color5: #FCFFFD;
+
 .index-links {
-  background-color: #123247;
+  background-color: $color1;
   height: 1050px;
   padding: 100px;
   width: 1400px;
 }
 
 .title-box {
-  background-color: #607293;
+  background-color: $color2;
   border: 2px solid black;
   border-radius: 30px;
   height: 20%;
@@ -24,7 +30,7 @@
 }
 
 .touch-box {
-  background-color: #607293;
+  background-color: $color2;
   border: 2px solid black;
   border-radius: 30px;
   height: 50%;
