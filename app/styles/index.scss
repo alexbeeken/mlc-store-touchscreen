@@ -4,7 +4,7 @@ $color3: #C0FDFB;
 $color4: #DAFFEF;
 $color5: #FCFFFD;
 
-.index-links {
+.page {
   background-color: $background-color;
   height: 1050px;
   padding: 100px;
@@ -17,11 +17,10 @@ $color5: #FCFFFD;
   border-radius: 30px;
   height: 20%;
   text-align: center;
-}
-
-.title {
-  padding-top: 15px;
-  font-size: 100px;
+  h1 {
+    padding-top: 35px;
+    font-size: 40px;
+  }
 }
 
 .touch-links {
@@ -37,10 +36,9 @@ $color5: #FCFFFD;
   float: left;
   margin: 10px;
   width: 31%;
-}
-
-.touch-box-title {
-  padding-top: 30;
-  text-align: center;
-  font-size: 30px;
+  h2 {
+    padding-top: 30;
+    text-align: center;
+    font-size: 30px;
+  }
 }
