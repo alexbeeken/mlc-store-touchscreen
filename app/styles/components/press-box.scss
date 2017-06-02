@@ -1,6 +1,6 @@
 .pb-box-area {
-  width: 31%;
-  height: 50%;
+  height: $link-box-height;
+  width: $link-box-width;
   min-width: $pb-min-width;
   min-height: $pb-min-height;
   margin: 1vw;
@@ -13,7 +13,7 @@
   border-radius: 30px;
   width: 100%;
   height: 100%;
-  box-shadow: $button-depth $button-depth 5px #000000;
+  text-align: center;
   h2 {
     padding-top: 30px;
     text-align: center;
@@ -22,13 +22,5 @@
 }
 
 .pb-content:active {
-  box-shadow: 0px 0px 0px #FFFFFF;
-  margin-left: $button-depth;
-  margin-top: $button-depth;
   background-color: $selected-color;
-}
-
-.pb-image {
-  width: 100%;
-  height: 100%;
 }

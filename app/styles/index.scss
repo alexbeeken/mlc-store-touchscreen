@@ -1,3 +1,24 @@
 .touch-links {
-  height: 70%;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.nav-icon {
+  height: 100%;
+  font-size: $nav-icon-size;
+  vertical-align: middle;
+  margin: 50px;
+  margin-top: 100px;
+}
+
+.forward-icon {
+  float: left;
+}
+
+.backward-icon {
+  float: right;
+}
+
+.index-links {
+  margin-top: 130px;
 }
