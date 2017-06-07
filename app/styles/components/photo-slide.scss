@@ -1,6 +1,26 @@
 .ps-container {
+  margin: 10px;
 }
 
 .ps-left {
-  
+  float: left;
+  width: 20%;
+  margin: auto;
+}
+
+.ps-middle {
+  float: left;
+  width: 60%;
+  height: 20%;
+  align-items: center;
+  img {
+    margin: auto;
+    width: 80%;
+  }
+}
+
+.ps-right {
+  float: right;
+  width: 20%;
+  margin: auto;
 }
