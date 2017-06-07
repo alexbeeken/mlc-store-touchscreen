@@ -2,8 +2,8 @@
   Tufa as a Benchmark
 {{/title-bar}}
 {{photo-slide slide=currentSlide}}
-{{#each slides as slide}}
-  <div class='photo-link'>
+<div class='photo-links'>
+  {{#each slides as |slide|}}
     <img src={{slide.path}}>
-  </div>
-{{/each}}
+  {{/each}}
+</div>
