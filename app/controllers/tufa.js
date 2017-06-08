@@ -2,7 +2,7 @@ import Ember from 'ember';
 
 const { computed } = Ember;
 
-export default Ember.Route.extend({
+export default Ember.Controller.extend({
   slides: [
     {
       title: 'Example Title',
@@ -36,5 +36,10 @@ export default Ember.Route.extend({
   currentSlideIdx: 0,
   currentSlide: computed('slides', 'currentSlideIdx', function() {
     return this.get('slides')[this.get('currentSlideIdx')]
-  })
+  }),
+  actions: {
+    switchIdx: function(Idx) {
+      this.set('currentSlideIdx', Idx);
+    }
+  }
 })

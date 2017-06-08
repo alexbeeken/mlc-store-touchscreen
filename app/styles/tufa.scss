@@ -1,0 +1,12 @@
+.photo-link {
+  width: $photo-link-size;
+  height: $photo-link-size;
+  float: left;
+  img {
+    width: 100%;
+  }
+}
+
+.photo-links {
+  float: left;
+}
