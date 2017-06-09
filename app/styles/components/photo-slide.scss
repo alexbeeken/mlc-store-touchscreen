@@ -1,13 +1,28 @@
 .ps-container {
-  margin-top: 30px;
-  margin-right: 30px;
-  margin-left: 30px;
+  margin: 20px;
+  margin-left: 180px;
+  height: 700px;
   overflow: auto;
+  -webkit-text-stroke: 1px white;
+  h1 {
+    font-size: $level-text-size;
+  }
+  h2 {
+    font-size: $year-text-size;
+  }
+  h3 {
+    font-size: $meter-text-size;
+  }
 }
 
 .ps-left {
   float: left;
   width: 20%;
+}
+
+.ps-photo {
+  height: 100%;
+  background-repeat: no-repeat;
 }
 
 .ps-middle {
@@ -36,7 +51,7 @@
 
 .photo-links {
   margin-left: 70px;
-  margin-top: 30px;
+  margin-top: 60px;
   text-align: center;
   width: 90%;
   overflow: auto;
