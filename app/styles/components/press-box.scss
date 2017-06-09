@@ -18,14 +18,19 @@
   width: 100%;
   height: 100%;
   text-align: center;
+  vertical-align: middle;
   h2 {
     -webkit-text-stroke: 1px white;
-    padding-top: 30px;
+    padding-top: 180px;
     text-align: center;
     font-size: 50px;
+  }
+  .touch-link-icon {
+    margin-top: 300px;
   }
 }
 
 .pb-content:active {
-  background-color: $selected-color;
+  border: 5px solid $selected-color;
+  border-radius: 30px;
 }
