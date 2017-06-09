@@ -4,10 +4,20 @@
 {{photo-slide slide=currentSlide}}
 <div class='photo-links'>
   {{#each slides as |slide index|}}
-    <div class='photo-link'>
-      <a {{action 'switchIdx' index}}>
-        <img src={{slide.path}}>
-      </a>
-    </div>
+    {{#if (eq currentSlideIdx index)}}
+      <div class='photo-link'>
+        <div class='selected'>
+          <a {{action 'switchIdx' index}}>
+            <img src={{slide.path}}>
+          </a>
+        </div>
+      </div>
+    {{else}}
+      <div class='photo-link'>
+        <a {{action 'switchIdx' index}}>
+          <img src={{slide.path}}>
+        </a>
+      </div>
+    {{/if}}
   {{/each}}
 </div>

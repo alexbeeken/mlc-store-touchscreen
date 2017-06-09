@@ -2,11 +2,19 @@
   width: $photo-link-size;
   height: $photo-link-size;
   float: left;
+  margin: 0px 50px;
   img {
     width: 100%;
   }
 }
 
+.photo-link .selected {
+  border: 5px solid $selected-color;
+}
+
 .photo-links {
-  float: left;
+  margin: 100px 100px;
+  text-align: center;
+  width: 90%;
+  overflow: auto;
 }
