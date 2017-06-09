@@ -1,5 +1,5 @@
 .ps-container {
-  margin-top: 50px;
+  margin-top: 30px;
   margin-right: 30px;
   margin-left: 30px;
   overflow: auto;
@@ -12,18 +12,32 @@
 
 .ps-middle {
   float: left;
-  width: 60%;
+  width: 70%;
   height: 20%;
   align-items: center;
   img {
-    margin-left: 20px;
     width: 95%;
   }
 }
 
-.ps-right {
-  float: right;
-  width: 20%;
-  margin: auto;
-  height: 100%;
+.photo-link {
+  width: $photo-link-size;
+  height: $photo-link-size;
+  float: left;
+  margin: 0px 65px;
+  img {
+    width: 100%;
+  }
+}
+
+.photo-link .selected {
+  border: 5px solid $selected-color;
+}
+
+.photo-links {
+  margin-left: 70px;
+  margin-top: 30px;
+  text-align: center;
+  width: 90%;
+  overflow: auto;
 }
