@@ -1,12 +1,13 @@
 .ps-container {
-  margin-top: 20px;
+  margin-top: 50px;
+  margin-right: 30px;
+  margin-left: 30px;
   overflow: auto;
 }
 
 .ps-left {
   float: left;
   width: 20%;
-  margin: auto;
 }
 
 .ps-middle {
@@ -15,8 +16,8 @@
   height: 20%;
   align-items: center;
   img {
-    margin: auto;
-    width: 80%;
+    margin-left: 20px;
+    width: 95%;
   }
 }
 
