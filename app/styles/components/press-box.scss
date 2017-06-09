@@ -1,9 +1,9 @@
 .pb-box-area {
-  height: $link-box-height;
-  width: $link-box-width;
+  height: $link-box-size;
+  width: $link-box-size;
   min-width: $pb-min-width;
   min-height: $pb-min-height;
-  margin: 1vw;
+  margin-left: 120px;
   float: left;
 }
 
