@@ -1,11 +1,16 @@
 import Ember from 'ember';
 
+const { computed } = Ember;
+
 export default Ember.Component.extend({
-  slide: {
-      title: 'Example Title',
-      subtitle: 'example subtitle',
-      data: '1234 units (example data)',
-      description: 'Long description with interpretation or definition or any other relevent information.',
-      path: '/negit-1993.jpg'
+  slides: [],
+  currentSlideIdx: 0,
+  currentSlide: computed('slides', 'currentSlideIdx', function() {
+    return this.get('slides')[this.get('currentSlideIdx')]
+  }),
+  actions: {
+    switchIdx: function(idx) {
+      this.set('currentSlideIdx', idx);
     }
+  }
 });

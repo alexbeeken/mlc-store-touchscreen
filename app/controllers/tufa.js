@@ -1,6 +1,5 @@
 import Ember from 'ember';
 
-const { computed } = Ember;
 
 export default Ember.Controller.extend({
   slides: [
@@ -32,14 +31,5 @@ export default Ember.Controller.extend({
       description: 'Long description with interpretation or definition or any other relevent information.',
       path: '/negit-2009.jpg'
     }
-  ],
-  currentSlideIdx: 0,
-  currentSlide: computed('slides', 'currentSlideIdx', function() {
-    return this.get('slides')[this.get('currentSlideIdx')]
-  }),
-  actions: {
-    switchIdx: function(idx) {
-      this.set('currentSlideIdx', idx);
-    }
-  }
+  ]
 })
