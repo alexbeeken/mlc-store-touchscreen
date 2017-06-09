@@ -9,7 +9,15 @@ export default Ember.Component.extend({
     return this.get('slides')[this.get('currentSlideIdx')]
   }),
   backgroundImage: computed('currentSlide', function() {
-    return "background-image: " + "url('" + this.get('currentSlide.path') + "')"
+    return "background-image: "
+      + "url('"
+      + this.get('currentSlide.path')
+      + "');"
+      + "height: "
+      + this.get('currentSlide.height') 
+      + "px; width: "
+      + this.get('currentSlide.width')
+      + 'px;'
   }),
   actions: {
     switchIdx: function(idx) {
