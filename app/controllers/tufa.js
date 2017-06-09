@@ -1,35 +1,34 @@
 import Ember from 'ember';
 
-
 export default Ember.Controller.extend({
   slides: [
     {
-      title: 'Example Title 1',
-      subtitle: 'example subtitle 1',
-      data: '1234 units (example data)',
-      description: 'Long description with interpretation or definition or any other relevent information.',
-      path: '/negit-1993.jpg'
+      title: '1962',
+      subtitle: '1948.9 m',
+      data: '6394 ft',
+      description: '',
+      path: '/tufa_1962.jpg'
     },
     {
-      title: 'Example Title 2',
-      subtitle: 'example subtitle 2',
-      data: '1234 units (example data)',
-      description: 'Long description with interpretation or definition or any other relevent information.',
-      path: '/negit-1998.jpg'
+      title: '1968',
+      subtitle: '1946.8 m',
+      data: '6387 ft',
+      description: '',
+      path: '/tufa_1968.jpg'
     },
     {
-      title: 'Example Title 3',
-      subtitle: 'example subtitle 3',
-      data: '1234 units (example data)',
-      description: 'Long description with interpretation or definition or any other relevent information.',
-      path: '/negit-2005.jpg'
+      title: '1995',
+      subtitle: '1944 m',
+      data: '6378 ft',
+      description: '',
+      path: '/tufa_1995.jpg'
     },
     {
-      title: 'Example Title 4',
-      subtitle: 'example subtitle 4',
-      data: '1234 units (example data)',
-      description: 'Long description with interpretation or definition or any other relevent information.',
-      path: '/negit-2009.jpg'
+      title: '2008',
+      subtitle: '1945.5 m',
+      data: '6383 ft',
+      description: '',
+      path: '/tufa_2008.jpg'
     }
   ]
 })
