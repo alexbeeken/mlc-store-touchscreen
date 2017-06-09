@@ -1,6 +1,7 @@
 .ps-container {
   overflow: auto;
   -webkit-text-stroke: 1px white;
+  margin-top: 20px;
   h1 {
     font-size: $level-text-size;
   }
@@ -18,6 +19,7 @@
 }
 
 .ps-photo {
+  border: 2px solid black;
   background-repeat: no-repeat;
   background-size: auto;
   margin: auto;
@@ -51,6 +53,10 @@
 
 .photo-link .selected {
   border: 5px solid $selected-color;
+}
+
+.photo-link .unselected {
+  border: 2px solid black;
 }
 
 .photo-links {

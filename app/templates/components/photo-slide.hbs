@@ -19,9 +19,11 @@
       </div>
     {{else}}
       <div class='photo-link'>
-        <a {{action 'switchIdx' index}}>
-          <img src={{slide.path}}>
-        </a>
+        <div class='unselected'>
+          <a {{action 'switchIdx' index}}>
+            <img src={{slide.path}}>
+          </a>
+        </div>
       </div>
     {{/if}}
   {{/each}}
