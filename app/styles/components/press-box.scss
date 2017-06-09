@@ -5,6 +5,10 @@
   min-height: $pb-min-height;
   margin-left: 120px;
   float: left;
+  a {
+    text-decoration: none;
+    color: black;
+  }
 }
 
 .pb-content {
@@ -15,9 +19,10 @@
   height: 100%;
   text-align: center;
   h2 {
+    -webkit-text-stroke: 1px white;
     padding-top: 30px;
     text-align: center;
-    font-size: 30px;
+    font-size: 50px;
   }
 }
 
