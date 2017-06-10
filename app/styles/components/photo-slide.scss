@@ -22,7 +22,8 @@
   img {
     border: 2px solid black;
     height: 500px;
-    margin: 20px;
+    margin-right: 40px;
+    margin-top: 20px;
     float: right;
   }
 }
@@ -39,7 +40,7 @@
 
 .ps-titles {
   float: left;
-  margin: 20px;
+  margin-left: 50px;
   h1 {
     font-weight: bold;
   }
@@ -48,6 +49,10 @@
 .ps-year {
   height: 30px;
   text-align: center;
+}
+
+.ps-data {
+  margin-top: 70px;
 }
 
 .photo-link {
