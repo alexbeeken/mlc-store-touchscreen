@@ -1,7 +1,10 @@
 <div class='ps-container'>
-  <div class='ps-photo' style={{backgroundImage}}>
+  <div class='ps-photo'>
+    <img src={{currentSlide.path}}/>
     <div class='ps-titles'>
-      <h1>{{currentSlide.year}}</h1>
+      <div class='ps-year'>
+        <h1>{{currentSlide.year}}</h1>
+      </div>
       <h2>{{currentSlide.levelFeet}}</h2>
       <h3>{{currentSlide.levelMeter}}</h3>
     </div>

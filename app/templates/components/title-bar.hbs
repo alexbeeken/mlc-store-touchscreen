@@ -1,11 +1,11 @@
 <div class='title-box'>
-  {{#if home}}
-    <div class='home-link'>
-      <a href='/'>
+  <div class='home-link'>
+    <a href='/'>
+      {{#if home}}
         <icon class="glyphicon glyphicon-home"></icon>
-      </a>
-    </div>
-  {{/if}}
+      {{/if}}
+    </a>
+  </div>
   <div class='title-text'>
     {{yield}}
   </div>

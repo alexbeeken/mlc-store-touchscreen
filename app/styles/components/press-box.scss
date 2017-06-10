@@ -1,8 +1,6 @@
 .pb-box-area {
-  height: $link-box-size;
-  width: $link-box-size;
-  min-width: $pb-min-width;
-  min-height: $pb-min-height;
+  width: $link-box-width;
+  height: $link-box-height;
   margin-left: 120px;
   float: left;
   a {
@@ -21,12 +19,12 @@
   vertical-align: middle;
   h2 {
     -webkit-text-stroke: 1px white;
-    padding-top: 180px;
+    padding-top: 80px;
     text-align: center;
-    font-size: 50px;
+    font-size: 40px;
   }
   .touch-link-icon {
-    margin-top: 300px;
+    margin-top: 200px;
   }
 }
 

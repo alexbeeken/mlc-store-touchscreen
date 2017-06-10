@@ -18,11 +18,20 @@ body {
   margin-left: 10px;
   padding-top: 10px;
   height: 90%;
+  width: 20%;
   a {
+    float: left;
     color: inherit;
     text-decoration: none;
     :active {
       color: $home-pressed-color;
     }
   }
+}
+
+.title-text {
+  font-size: $title-font-size;
+  margin-top: $title-margin-top;
+  width: 80%;
+  text-align: center;
 }

@@ -1,7 +1,5 @@
 .ps-container {
   overflow: auto;
-  -webkit-text-stroke: 1px white;
-  margin-top: 20px;
   h1 {
     font-size: $level-text-size;
   }
@@ -19,16 +17,14 @@
 }
 
 .ps-photo {
-  border: 2px solid black;
-  background-repeat: no-repeat;
-  background-size: auto;
   margin: auto;
   max-height: 725px;
-}
-
-.ps-centering {
-  overflow: auto;
-  margin: auto;
+  img {
+    border: 2px solid black;
+    height: 500px;
+    margin: 20px;
+    float: right;
+  }
 }
 
 .ps-middle {
@@ -41,11 +37,24 @@
   }
 }
 
+.ps-titles {
+  float: left;
+  margin: 20px;
+  h1 {
+    font-weight: bold;
+  }
+}
+
+.ps-year {
+  height: 30px;
+  text-align: center;
+}
+
 .photo-link {
   width: $photo-link-size;
   height: $photo-link-size;
   float: left;
-  margin: 0px 65px;
+  margin: $photo-link-margins;
   img {
     width: 100%;
   }
@@ -60,7 +69,7 @@
 }
 
 .photo-links {
-  margin-left: 70px;
+  margin-left: 90px;
   position: absolute;
   bottom: 0;
   left: 0;

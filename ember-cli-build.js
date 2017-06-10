@@ -7,6 +7,9 @@ module.exports = function(defaults) {
       'bootstrapVersion': 3,
       'importBootstrapFont': true,
       'importBootstrapCSS': false
+    },
+    fingerprint: {
+      prepend: 'file:///Users/alexbeeken/Code/store-touchscreen/dist/'
     }
   });
 
