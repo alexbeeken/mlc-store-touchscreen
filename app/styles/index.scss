@@ -3,10 +3,6 @@
   overflow: auto;
 }
 
-.home-link {
-  font-size: $nav-icon-size;
-}
-
 // .forward-icon {
 //   float: left;
 // }
@@ -16,10 +12,6 @@
 // }
 
 .index-links {
+  padding-top: 18vw;
   width: 100%;
-}
-
-.touch-link-icon {
-  -webkit-text-stroke: 1px white;
-  font-size: $touch-link-icon-size;
 }
