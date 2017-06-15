@@ -1,8 +1,7 @@
 .title-box {
   background-color: $box-color;
-  height: 100px;
+  height: 5vw;
   text-align: center;
-  font-size: 50px;
   border: 2px solid black;
 }
 
@@ -12,10 +11,10 @@ body {
 
 .home-link {
   float: left;
-  padding-top: 10px;
-  height: 90%;
+  height: 100%;
   width: 20%;
   a {
+    font-size: 3.8vw;
     float: left;
     color: inherit;
     text-decoration: none;
@@ -27,7 +26,6 @@ body {
 
 .title-text {
   font-size: $title-font-size;
-  margin-top: $title-margin-top;
-  width: 100%;
+  width: 80%;
   text-align: center;
 }
