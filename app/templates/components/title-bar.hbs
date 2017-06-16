@@ -1,10 +1,10 @@
 <div class='title-box'>
   <div class='home-link'>
-    {{#link-to 'index'}}
-      {{#if home}}
+    {{#liquid-if home}}
+      {{#link-to 'index'}}
         <icon class="glyphicon glyphicon-home"></icon>
-      {{/if}}
-    {{/link-to}}
+      {{/link-to}}
+    {{/liquid-if}}
   </div>
   <div class='title-text'>
     {{yield}}

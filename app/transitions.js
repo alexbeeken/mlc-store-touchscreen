@@ -16,4 +16,11 @@ export default function(){
     this.use('toDown'),
     this.reverse('toUp')
   );
+
+  this.transition(
+    this.childOf('.home-link'),
+    this.toValue(true),
+    this.use('toRight'),
+    this.reverse('toLeft')
+  )
 };
