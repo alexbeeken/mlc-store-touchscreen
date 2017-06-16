@@ -14,7 +14,7 @@ export default Ember.Component.extend({
       + this.get('currentSlide.path')
       + "');"
       + "height: "
-      + this.get('currentSlide.height') 
+      + this.get('currentSlide.height')
       + "px; width: "
       + this.get('currentSlide.width')
       + 'px;'

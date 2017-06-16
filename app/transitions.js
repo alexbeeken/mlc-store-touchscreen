@@ -22,5 +22,12 @@ export default function(){
     this.toValue(true),
     this.use('toRight'),
     this.reverse('toLeft')
+  );
+
+  this.transition(
+    this.childOf('.ps-container'),
+    this.toValue(function(toValue, fromValue) {return toValue < fromValue}),
+    this.use('toRight'),
+    this.reverse('toLeft')
   )
 };
