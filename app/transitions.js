@@ -20,8 +20,8 @@ export default function(){
   this.transition(
     this.childOf('.home-link'),
     this.toValue(true),
-    this.use('toRight'),
-    this.reverse('toLeft')
+    this.use('fade'),
+    this.reverse('fade')
   );
 
   this.transition(
