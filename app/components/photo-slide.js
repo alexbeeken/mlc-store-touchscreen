@@ -30,12 +30,12 @@ export default Ember.Component.extend({
       this.set('currentSlideIdx', idx);
     },
     startSwitching: function(idx = 0) {
-        Ember.run.later(this, function() {
-          var currentIdx = this.get('currentSlideIdx')
-          var newIdx = (currentIdx + 1) % 4
-          this.send('switchIdx', (currentIdx + 1) % 4)
-          this.send('startSwitching', newIdx)
-        }, slideInterval)
-      }
+      Ember.run.later(this, function() {
+        var currentIdx = this.get('currentSlideIdx')
+        var newIdx = (currentIdx + 1) % 4
+        this.send('switchIdx', (currentIdx + 1) % 4)
+        this.send('startSwitching', newIdx)
+      }, slideInterval)
     }
-  });
+  }
+});
