@@ -8,9 +8,6 @@ module.exports = function(defaults) {
       'importBootstrapFont': true,
       'importBootstrapCSS': false
     },
-    fingerprint: {
-      prepend: 'file:///Users/alexbeeken/Code/store-touchscreen/dist/'
-    },
     emberCliConcat: {
       js: {
         concat: true
