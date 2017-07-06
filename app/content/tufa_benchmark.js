@@ -1,6 +1,8 @@
 export const content =
 {
   title: 'Tufa as a Benchmark',
+  route: 'tufa',
+  linkImage: '/tufa_1962.jpg',
   slides: [
     {
       year: '1962',
