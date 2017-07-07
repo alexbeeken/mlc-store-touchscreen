@@ -1,10 +1,8 @@
 <div class='pb-box-area'>
   {{#link-to href}}
     {{#if media.isMobile}}
-      <div class='mobile'>
-        <div class='pb-content' style={{backgroundImage}} width="100%">
-          {{yield}}
-        </div>
+      <div class='pb-content' style={{backgroundImage}} width="100%">
+        {{yield}}
       </div>
     {{else}}
       <div class='pb-content' style={{backgroundImage}}>
