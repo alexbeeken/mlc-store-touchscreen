@@ -1,17 +1,22 @@
 .touch-links {
-  overflow: auto;
 }
 
-// .forward-icon {
-//   float: left;
-// }
-//
-// .backward-icon {
-//   float: right;
-// }
+.forward-icon {
+  padding-top: 35vh;
+  width: 10%;
+  float: left;
+  font-size: 10vw;
+}
+
+.backward-icon {
+  padding-top: 7.5vh;
+  width: 10%;
+  float: right;
+  font-size: 10vw;
+}
 
 .index-links {
-  padding-top: 30vh;
+  padding-top: 28vh;
   vertical-align: middle;
   margin-left: 0.5vw;
   width: 80%;

@@ -11,5 +11,11 @@ export default Ember.Controller.extend({
       tufaContent,
       negitContent
     ]
+  }),
+  showForwardArrow: computed( function() {
+    return true
+  }),
+  showBackArrow: computed( function() {
+    return true
   })
 })
