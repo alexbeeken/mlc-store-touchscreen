@@ -1,7 +1,15 @@
 <div class='pb-box-area'>
   {{#link-to href}}
-    <div class='pb-content' style={{backgroundImage}}>
-      {{yield}}
-    </div>
+    {{#if media.isMobile}}
+      <div class='mobile'>
+        <div class='pb-content' style={{backgroundImage}} width="100%">
+          {{yield}}
+        </div>
+      </div>
+    {{else}}
+      <div class='pb-content' style={{backgroundImage}}>
+        {{yield}}
+      </div>
+    {{/if}}
   {{/link-to}}
 </div>
