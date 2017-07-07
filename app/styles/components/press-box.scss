@@ -1,5 +1,8 @@
 .pb-box-area {
-  margin: auto;
+  margin: 0 0.5vw;
+  width: 30vw;
+  height: 30vw;
+  float: left;
   a {
     text-decoration: none;
     color: black;
@@ -11,12 +14,9 @@
   background-size: 130%;
   border: 0.18vw solid black;
   border-radius: 3vw;
-  width: 30vw;
-  height: 30vh;
+  width: 100%;
+  height: 100%;
   text-align: center;
-  vertical-align: middle;
-  margin: auto;
-  padding-top: 1vw;
   h2 {
     padding-top: 0.5vh;
     -webkit-text-stroke: 0.06vw white;
@@ -30,17 +30,22 @@
   }
 }
 
-.media-mobile .pb-content {
-  width: 100%;
-  max-height: 15vh;
-  min-height: 80px;
-  .touch-link-icon {
-    display: none;
+.media-mobile {
+  .pb-content {
+    .touch-link-icon {
+      display: none;
+    }
+    h2 {
+      vertical-align: middle;
+      font-size: 7vw;
+      -webkit-text-stroke: 0.1vw white;
+    }
   }
-  h2 {
-    vertical-align: middle;
-    font-size: 7vw;
-    -webkit-text-stroke: 0.1vw white;
+  .pb-box-area {
+    width: 100%;
+    max-height: 15vh;
+    min-height: 80px;
+    margin: 0.5vh 0;
   }
 }
 
