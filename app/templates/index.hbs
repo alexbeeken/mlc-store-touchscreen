@@ -1,22 +1,22 @@
-{{#if showForwardArrow}}
-  <div class='nav-icon forward-icon'>
-    <icon class="glyphicon glyphicon-triangle-left"></icon>
-  </div>
-{{/if}}
-  <div class='index-links'>
-    <div class='touch-links'>
-      {{#each links as |link|}}
-        {{#press-box href=link.route imagePath=link.linkImage}}
-          <h2> {{link.title}} </h2>
-          <div class='touch-link-icon'>
-            <icon class="glyphicon glyphicon-hand-up"></icon>
-          </div>
-        {{/press-box}}
-      {{/each}}
+<div class='index-links'>
+  {{#if showForwardArrow}}
+    <div class='nav-icon forward-icon'>
+      <icon class="glyphicon glyphicon-triangle-left"></icon>
     </div>
+  {{/if}}
+  <div class='touch-links'>
+    {{#each links as |link|}}
+      {{#press-box href=link.route imagePath=link.linkImage}}
+        <h2> {{link.title}} </h2>
+        <div class='touch-link-icon'>
+          <icon class="glyphicon glyphicon-hand-up"></icon>
+        </div>
+      {{/press-box}}
+    {{/each}}
   </div>
-{{#if showBackArrow}}
-  <div class='nav-icon backward-icon'>
-    <icon class="glyphicon glyphicon-triangle-right"></icon>
-  </div>
-{{/if}}
+  {{#if showBackArrow}}
+    <div class='nav-icon backward-icon'>
+      <icon class="glyphicon glyphicon-triangle-right"></icon>
+    </div>
+  {{/if}}
+</div>

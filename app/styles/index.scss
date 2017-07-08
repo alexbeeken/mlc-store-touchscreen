@@ -1,24 +1,21 @@
 .touch-links {
+  max-width: 50%;
 }
 
 .forward-icon {
-  padding-top: 35vh;
-  width: 10%;
-  float: left;
+  max-width: 10%;
+  align-self: flex-end;
   font-size: 10vw;
 }
 
 .backward-icon {
-  padding-top: 7.5vh;
-  width: 10%;
-  float: right;
+  max-width: 10%;
+  align-self: flex-start;
   font-size: 10vw;
 }
 
 .index-links {
-  padding-top: 31vh;
-  vertical-align: middle;
-  margin-left: 0.5vw;
-  width: 80%;
-  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
