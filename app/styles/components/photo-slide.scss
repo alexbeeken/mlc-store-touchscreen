@@ -1,5 +1,7 @@
 .ps-container {
-  overflow: auto;
+  height: 100%;
+  display: flex;
+  align-items: stretch;
   h1 {
     font-size: $level-text-size;
   }
@@ -11,48 +13,29 @@
   }
 }
 
-.ps-left {
-  float: left;
-  width: 20%;
-}
-
 .ps-photo {
-  margin: auto;
-  max-height: 725px;
+  float: right;
+  max-width: 60%;
+  margin: 3vw;
   img {
-    border: 2px solid black;
-    height: 500px;
-    margin-right: 40px;
-    margin-top: 20px;
-    float: right;
-  }
-}
-
-.ps-middle {
-  float: left;
-  width: 70%;
-  height: 20%;
-  align-items: center;
-  img {
-    width: 95%;
+    max-width: 100%;
+    border: 0.1vw solid black;
   }
 }
 
 .ps-titles {
   float: left;
-  margin-left: 50px;
+  max-width: 20%;
   h1 {
     font-weight: bold;
   }
 }
 
 .ps-year {
-  height: 30px;
   text-align: center;
 }
 
 .ps-data {
-  margin-top: 70px;
 }
 
 .photo-link {

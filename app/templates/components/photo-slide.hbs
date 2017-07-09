@@ -2,14 +2,14 @@
   {{#liquid-bind currentSlideIdx}}
     <div class='ps-photo'>
       <img src={{currentSlide.path}}/>
-      <div class='ps-titles'>
-        <div class='ps-year'>
-          <h1>{{currentSlide.year}}</h1>
-        </div>
-        <div class='ps-data'>
-          <h2>{{currentSlide.levelFeet}}</h2>
-          <h3>{{currentSlide.levelMeter}}</h3>
-        </div>
+    </div>
+    <div class='ps-titles'>
+      <div class='ps-year'>
+        <h1>{{currentSlide.year}}</h1>
+      </div>
+      <div class='ps-data'>
+        <h2>{{currentSlide.levelFeet}}</h2>
+        <h3>{{currentSlide.levelMeter}}</h3>
       </div>
     </div>
   {{/liquid-bind}}
