@@ -6,6 +6,7 @@ import { content as tufaContent } from '../content/tufa_benchmark';
 
 
 export default Ember.Controller.extend({
+  screen: inject.service(),
   media: inject.service(),
   links: computed( function() {
     return [
