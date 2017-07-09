@@ -1,3 +1,13 @@
+.media-mobile {
+  .title-text {
+    font-size: 3.5vw;
+  }
+
+  .title-box {
+    height: 5vw;
+  }
+}
+
 .title-box {
   background-color: $box-color;
   height: 5vw;
@@ -22,7 +32,7 @@ body {
 }
 
 .title-text {
-  font-size: $title-font-size;
+  font-size: 3.1vw;
   width: 80%;
   text-align: center;
 }

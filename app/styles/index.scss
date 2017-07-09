@@ -1,17 +1,42 @@
-.touch-links {
-  width: 100%;
-  overflow: visible;
+.index-links {
+  display: flex;
+  align-items: center;
 }
 
-// .forward-icon {
-//   float: left;
-// }
-//
-// .backward-icon {
-//   float: right;
-// }
-
-.index-links {
-  padding-top: 26vh;
+.touch-links {
+  margin-top: -7vw;
   width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.forward-icon {
+  height: inherit;
+  display: flex;
+  max-width: 10%;
+  font-size: 10vw;
+}
+
+.backward-icon {
+  height: inherit;
+  display: flex;
+  max-width: 10%;
+  font-size: 10vw;
+}
+
+.touch-links icon {
+  align-self: center;
+}
+
+.media-mobile {
+  .index-links {
+    display: flex;
+    align-items: center;
+    margin: 2vw;
+  }
+
+  .touch-links {
+    display: flex;
+    flex-direction: column;
+  }
 }

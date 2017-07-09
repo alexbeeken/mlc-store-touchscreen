@@ -1,6 +1,6 @@
 .pb-box-area {
-  width: 50%;
-  float: left;
+  height: 22vw;
+  width: 22vw;
   a {
     text-decoration: none;
     color: black;
@@ -9,25 +9,39 @@
 
 .pb-content {
   background-color: $box-color;
-  background-size: 130%;
+  background-size: 150%;
   border: 0.18vw solid black;
   border-radius: 3vw;
-  width: $link-box-width;
-  height: $link-box-height;
+  width: 100%;
+  height: 100%;
   text-align: center;
-  vertical-align: middle;
   margin: auto;
-  padding-top: 1vw;
   h2 {
-    padding-top: 8vw;
-    -webkit-text-stroke: 0.06vw white;
+    padding-top: 0.5vh;
+    -webkit-text-stroke: 0.03vw white;
     text-align: center;
-    font-size: 3vw;
+    font-size: 4vw;
   }
   .touch-link-icon {
     padding-top: 3vw;
-    -webkit-text-stroke: 0.06vw white;
-    font-size: $touch-link-icon-size;
+    -webkit-text-stroke: 0.03vw white;
+    font-size: 4vw;
+  }
+}
+
+.media-mobile {
+  .pb-content {
+    .touch-link-icon {
+      display: none;
+    }
+    h2 {
+      font-size: 7vw;
+      -webkit-text-stroke: 0.1vw white;
+    }
+  }
+  .pb-box-area {
+    width: 100%;
+    float: left;
   }
 }
 
