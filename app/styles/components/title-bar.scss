@@ -9,13 +9,13 @@
 }
 
 .title-box {
-  background-color: $box-color;
+  background-color: $title-box-color;
   height: 5%;
   text-align: center;
 }
 
 body {
-  background-color: $background-color;
+  background: $background-color;
 }
 
 .home-link {
@@ -33,6 +33,7 @@ body {
   font-size: 3.1vw;
   width: 100%;
   text-align: center;
+  color: white;
 }
 
 .media-mobile {
