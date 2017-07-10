@@ -25,7 +25,8 @@
 
 .ps-titles {
   float: left;
-  max-width: 20%;
+  max-width: 40%;
+  margin: 3vw;
   h1 {
     font-weight: bold;
   }
@@ -60,4 +61,34 @@
   margin-left: 90px;
   margin-top: 65px;
   width: 90%;
+}
+
+.media-mobile {
+  .photo-links {
+    display: none;
+  }
+
+  h1 {
+    font-size: $level-text-size-mobile;
+  }
+  h2 {
+    font-size: $year-text-size-mobile;
+  }
+  h3 {
+    font-size: $meter-text-size-mobile;
+  }
+
+  .ps-photo {
+    max-width: 100%;
+    float: none;
+    margin: auto;
+    margin-top: 10vh;
+  }
+
+  .ps-titles {
+    float: none;
+    max-width: 100%;
+    margin: auto;
+    text-align: center;
+  }
 }
