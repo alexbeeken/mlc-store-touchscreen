@@ -1,5 +1,6 @@
 .ps-container {
-  overflow: auto;
+  height: 90%;
+  width: 100%;
   h1 {
     font-size: $level-text-size;
   }
@@ -11,70 +12,116 @@
   }
 }
 
-.ps-left {
-  float: left;
-  width: 20%;
-}
-
 .ps-photo {
-  margin: auto;
-  max-height: 725px;
-  img {
-    border: 2px solid black;
-    height: 500px;
-    margin-right: 40px;
-    margin-top: 20px;
-    float: right;
-  }
-}
-
-.ps-middle {
-  float: left;
-  width: 70%;
-  height: 20%;
-  align-items: center;
-  img {
-    width: 95%;
-  }
+  float: right;
+  height: 70vh;
+  min-width: 60%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: top right;
+  margin: 1vw;
 }
 
 .ps-titles {
-  float: left;
-  margin-left: 50px;
+  align-items: center;
+  justify-content: center;
+  height: inherit;
+  min-width: 30%;
+  margin: 3vw;
   h1 {
     font-weight: bold;
   }
 }
 
 .ps-year {
-  height: 30px;
-  text-align: center;
 }
 
 .ps-data {
-  margin-top: 70px;
 }
 
 .photo-link {
-  width: $photo-link-size;
-  height: $photo-link-size;
-  float: left;
-  margin: $photo-link-margins;
-  img {
-    width: 100%;
-  }
+  height: 10vh;
+  width: 10vw;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .photo-link .selected {
-  border: 5px solid $selected-color;
-}
-
-.photo-link .unselected {
-  border: 2px solid black;
+  border: 5vw solid $selected-color;
 }
 
 .photo-links {
-  margin-left: 90px;
-  margin-top: 65px;
-  width: 90%;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  width: 100%;
+  height: 15vh;
+}
+
+.photo-links-spacer {
+  width: 60%;
+  display: flex;
+  align-self: center;
+  align-items: stretch;
+  justify-content: space-between;
+  align-content: center;
+}
+
+.media-mobile {
+  .ps-container {
+    height: 50%;
+  }
+
+  .ps-photo {
+    margin-top: 15%;
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  .ps-photo-centering {
+    height: 40vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .ps-titles {
+    height: 25vh;
+    .ps-year {
+      float: left;
+    }
+    .ps-data {
+      float: right;
+    }
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .photo-links {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    width: 100%;
+    height: 15vh;
+  }
+
+  .photo-link {
+    width: 10vw;
+    height: 10vh;
+  }
+
+  .photo-links-spacer {
+    width: 70%;
+  }
+
+  h1 {
+    font-size: $level-text-size-mobile;
+  }
+  h2 {
+    font-size: $year-text-size-mobile;
+  }
+  h3 {
+    font-size: $meter-text-size-mobile;
+  }
 }
