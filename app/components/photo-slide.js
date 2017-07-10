@@ -1,27 +1,18 @@
 import Ember from 'ember';
 
-const { computed } = Ember;
+const { computed, inject } = Ember;
+const { service } = inject;
 import RecognizerMixin from 'ember-gestures/mixins/recognizers';
 
 const slideInterval = 8000;
 
 export default Ember.Component.extend({
+  screen: inject.service(),
   recognizers: 'swipe',
   slides: [],
   currentSlideIdx: 0,
   currentSlide: computed('slides', 'currentSlideIdx', function() {
     return this.get('slides')[this.get('currentSlideIdx')]
-  }),
-  backgroundImage: computed('currentSlide', function() {
-    return "background-image: "
-      + "url('"
-      + this.get('currentSlide.path')
-      + "');"
-      + "height: "
-      + this.get('currentSlide.height')
-      + "px; width: "
-      + this.get('currentSlide.width')
-      + 'px;'
   }),
   init: function() {
     this._super();

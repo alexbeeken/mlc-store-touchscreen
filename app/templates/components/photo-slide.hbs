@@ -1,12 +1,9 @@
 <div class='ps-container'>
   {{#liquid-bind currentSlideIdx}}
-    <div class='ps-photo'>
+    <div class='ps-photo' style="background-image: url('{{currentSlide.path}}');">
       {{#if media.isMobile}}
         <a {{action 'switchIdx' on='swipeRight'}}>
-          <img src={{slide.path}}>
         </a>
-      {{else}}
-        <img src={{currentSlide.path}}/>
       {{/if}}
     </div>
     <div class='ps-titles'>
@@ -21,23 +18,19 @@
   {{/liquid-bind}}
 </div>
 <div class='photo-links'>
-  {{#each slides as |slide index|}}
-    {{#if (eq currentSlideIdx index)}}
-      <div class='photo-link'>
-        <div class='selected'>
-          <a {{action 'switchIdx' index}}>
-            <img src={{slide.path}}>
-          </a>
-        </div>
-      </div>
-    {{else}}
-      <div class='photo-link'>
-        <div class='unselected'>
-          <a {{action 'switchIdx' index}}>
-            <img src={{slide.path}}>
-          </a>
-        </div>
-      </div>
-    {{/if}}
-  {{/each}}
+  <div class='photo-links-spacer'>
+    {{#each slides as |slide index|}}
+      {{#if (eq currentSlideIdx index)}}
+        <a {{action 'switchIdx' index}}>
+          <div class='photo-link' style="background-image: url('{{slide.path}}');">
+          </div>
+        </a>
+      {{else}}
+        <a {{action 'switchIdx' index}}>
+          <div class='photo-link' style="background-image: url('{{slide.path}}');">
+          </div>
+        </a>
+      {{/if}}
+    {{/each}}
+  </div>
 </div>

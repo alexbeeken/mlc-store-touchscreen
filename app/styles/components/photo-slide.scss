@@ -1,7 +1,6 @@
 .ps-container {
-  height: 100%;
-  display: flex;
-  align-items: stretch;
+  height: 80%;
+  width: 100%;
   h1 {
     font-size: $level-text-size;
   }
@@ -15,17 +14,19 @@
 
 .ps-photo {
   float: right;
-  max-width: 60%;
-  margin: 3vw;
-  img {
-    max-width: 100%;
-    border: 0.1vw solid black;
-  }
+  height: 70vh;
+  min-width: 60%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: top right;
+  margin: 1vw;
 }
 
 .ps-titles {
-  float: left;
-  max-width: 40%;
+  align-items: center;
+  justify-content: center;
+  height: inherit;
+  min-width: 30%;
   margin: 3vw;
   h1 {
     font-weight: bold;
@@ -40,26 +41,30 @@
 }
 
 .photo-link {
-  width: $photo-link-size;
-  height: $photo-link-size;
-  margin: $photo-link-margins;
-  img {
-    width: 100%;
-  }
+  height: 10vh;
+  width: 10vw;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .photo-link .selected {
   border: 5px solid $selected-color;
 }
 
-.photo-link .unselected {
-  border: 2px solid black;
+.photo-links {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  width: 100%;
+  height: 10%;
 }
 
-.photo-links {
-  margin-left: 9vw;
-  margin-top: 5vw;
-  width: 90%;
+.photo-links-spacer {
+  width: 60%;
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  align-content: center;
 }
 
 .media-mobile {
@@ -67,16 +72,16 @@
     width: 100%;
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
   }
 
   .photo-link {
-    width: 10px;
-    height: 10%;
-    display: flex;
-    background-size: 10%;
+    width: 100vw;
+    height: 100%;
     img {
-      width: 20%;
-      height: 10%;
+      width: 100%;
+      height: 100%;
     }
   }
 
@@ -113,4 +118,7 @@
     margin: auto;
     text-align: center;
   }
+}
+
+.slide-sizer {
 }
