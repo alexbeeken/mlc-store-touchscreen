@@ -1,10 +1,12 @@
 <div class='ps-container'>
   {{#liquid-bind currentSlideIdx}}
-    <div class='ps-photo' style="background-image: url('{{currentSlide.path}}');">
-      {{#if media.isMobile}}
-        <a {{action 'switchIdx' on='swipeRight'}}>
-        </a>
-      {{/if}}
+    <div class='ps-photo-centering'>
+      <div class='ps-photo' style="background-image: url('{{currentSlide.path}}');">
+        {{#if media.isMobile}}
+          <a {{action 'switchIdx' on='swipeRight'}}>
+          </a>
+        {{/if}}
+      </div>
     </div>
     <div class='ps-titles'>
       <div class='ps-year'>
@@ -22,7 +24,7 @@
     {{#each slides as |slide index|}}
       {{#if (eq currentSlideIdx index)}}
         <a {{action 'switchIdx' index}}>
-          <div class='photo-link' style="background-image: url('{{slide.path}}');">
+          <div class='photo-link selected' style="background-image: url('{{slide.path}}');">
           </div>
         </a>
       {{else}}
