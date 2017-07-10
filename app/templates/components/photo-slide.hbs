@@ -1,7 +1,13 @@
 <div class='ps-container'>
   {{#liquid-bind currentSlideIdx}}
     <div class='ps-photo'>
-      <img src={{currentSlide.path}}/>
+      {{#if media.isMobile}}
+        <a {{action 'switchIdx' on='swipeRight'}}>
+          <img src={{slide.path}}>
+        </a>
+      {{else}}
+        <img src={{currentSlide.path}}/>
+      {{/if}}
     </div>
     <div class='ps-titles'>
       <div class='ps-year'>

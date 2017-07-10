@@ -42,7 +42,6 @@
 .photo-link {
   width: $photo-link-size;
   height: $photo-link-size;
-  float: left;
   margin: $photo-link-margins;
   img {
     width: 100%;
@@ -58,14 +57,27 @@
 }
 
 .photo-links {
-  margin-left: 90px;
-  margin-top: 65px;
+  margin-left: 9vw;
+  margin-top: 5vw;
   width: 90%;
 }
 
 .media-mobile {
   .photo-links {
-    display: none;
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  .photo-link {
+    width: 10px;
+    height: 10%;
+    display: flex;
+    background-size: 10%;
+    img {
+      width: 20%;
+      height: 10%;
+    }
   }
 
   h1 {
@@ -82,10 +94,20 @@
     max-width: 100%;
     float: none;
     margin: auto;
-    margin-top: 10vh;
+    margin-top: 5vh;
   }
 
   .ps-titles {
+    .ps-year {
+      float: left;
+      margin: 5vw;
+      margin-top: 1vw;
+    }
+    .ps-data {
+      float: right;
+      margin: 5vw;
+      margin-top: 1vw;
+    }
     float: none;
     max-width: 100%;
     margin: auto;
