@@ -1,5 +1,5 @@
 .ps-container {
-  height: 80%;
+  height: 90%;
   width: 100%;
   h1 {
     font-size: $level-text-size;
@@ -56,11 +56,12 @@
   align-content: center;
   justify-content: center;
   width: 100%;
-  height: 10%;
+  height: 15vh;
 }
 
 .photo-links-spacer {
   width: 60%;
+  align-self: center;
   display: flex;
   align-items: stretch;
   justify-content: space-between;
