@@ -22,8 +22,9 @@ body {
   position: absolute;
   width: 20%;
   color: $base-white;
+  margin: 0.15vw;
   a {
-    font-size: 3.8vw;
+    font-size: 3.5vw;
     float: left;
     color: $base-white;
     text-decoration: none;
@@ -32,10 +33,11 @@ body {
 
 .title-text {
   font-size: 3.1vw;
-  width: 100%;
+  width: 80%;
   text-align: center;
   color: $base-white;
   font-family: $title-font;
+  margin: auto;
 }
 
 .media-mobile {
