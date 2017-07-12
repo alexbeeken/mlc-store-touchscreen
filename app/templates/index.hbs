@@ -8,7 +8,7 @@
     {{#each links as |link|}}
       {{#press-box href=link.route imagePath=link.linkImage}}
         <div class='link-title'>
-          <h2>{{link.title}}</h2>
+          <h2>{{upper link.title}}</h2>
         </div>
       {{/press-box}}
     {{/each}}
