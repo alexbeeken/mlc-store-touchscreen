@@ -41,14 +41,16 @@
 }
 
 .photo-link {
-  height: 10vh;
-  width: 10vh;
-  background-size: contain;
-  background-repeat: no-repeat;
+    display: inline-block;
+  img {
+    width: auto;
+    height: 10vh;
+    max-width: 13vw;
+  }
 }
 
 .selected {
-  outline: 0.2vw solid $selected-color;
+  outline: 0.5vw solid $selected-color;
 }
 
 .photo-links {
@@ -94,8 +96,9 @@
     }
     .ps-data {
       float: right;
+      margin-right: 10vw;
     }
-    max-width: 100%;
+    width: 100%;
     text-align: center;
   }
 
@@ -108,12 +111,18 @@
   }
 
   .photo-link {
-    width: 10vw;
-    height: 10vh;
+    img {
+      width: auto;
+      height: 5vh;
+    }
   }
 
   .photo-links-spacer {
     width: 70%;
+  }
+
+  .selected {
+    outline: 1vw solid $selected-color;
   }
 
   h1 {

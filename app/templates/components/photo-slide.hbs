@@ -24,12 +24,14 @@
     {{#each slides as |slide index|}}
       {{#if (eq currentSlideIdx index)}}
         <a {{action 'switchIdx' index}}>
-          <div class='photo-link selected' style="background-image: url('{{slide.path}}');">
+          <div class='photo-link selected'>
+            <img src={{slide.path}}>
           </div>
         </a>
       {{else}}
         <a {{action 'switchIdx' index}}>
-          <div class='photo-link' style="background-image: url('{{slide.path}}');">
+          <div class='photo-link'>
+            <img src={{slide.path}}>
           </div>
         </a>
       {{/if}}
