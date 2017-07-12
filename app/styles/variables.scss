@@ -1,9 +1,9 @@
 // color scheme
-$background-color: #5D737E;
-$box-color: #64B6AC;
+$base-white: #FDFDFD;
+$title-box-color: #5d7cce;
 $home-pressed-color: #FCFFFD;
 $color5: #DAFFEF;
-$selected-color: #C0FDFB;
+$selected-color: #5d7cce;
 
 // Text Styling
 $level-text-size: 9vw;
@@ -12,6 +12,9 @@ $meter-text-size: 3.5vw;
 $level-text-size-mobile: 18vw;
 $year-text-size-mobile: 10vw;
 $meter-text-size-mobile: 7vw;
+$title-font: 'Bevan';
+$links-font: 'Paytone One';
+$data-font: 'Shanti';
 
 // title
 $title-margin-top: 22px;

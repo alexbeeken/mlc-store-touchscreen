@@ -1,10 +1,12 @@
 .index-links {
+  height: 95vh;
+  width: 100%;
   display: flex;
   align-items: center;
 }
 
 .touch-links {
-  margin-top: -7vw;
+  margin-top: -7vh;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -30,6 +32,7 @@
 
 .media-mobile {
   .index-links {
+    height: 85vh;
     display: flex;
     align-items: center;
     margin: 2vw;

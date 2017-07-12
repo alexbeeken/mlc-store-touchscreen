@@ -1,4 +1,4 @@
-<div class='index-links' style="height: {{screen.height}}px">
+<div class='index-links'>
   <div class='touch-links'>
     <div class='nav-icon forward-icon'>
       {{#if showForwardArrow}}
@@ -6,10 +6,9 @@
       {{/if}}
     </div>
     {{#each links as |link|}}
-      {{#press-box href=link.route imagePath=link.linkImage}}
-        <h2> {{link.title}} </h2>
-        <div class='touch-link-icon'>
-          <icon class="glyphicon glyphicon-hand-up"></icon>
+      {{#press-box href=link.route linkColor=link.linkColor}}
+        <div class='link-title'>
+          <h2>{{upper link.title}}</h2>
         </div>
       {{/press-box}}
     {{/each}}

@@ -1,6 +1,6 @@
 .pb-box-area {
   height: 22vw;
-  width: 22vw;
+  width: 30vw;
   a {
     text-decoration: none;
     color: black;
@@ -8,43 +8,40 @@
 }
 
 .pb-content {
-  background-color: $box-color;
-  background-size: 150%;
-  border: 0.18vw solid black;
-  border-radius: 3vw;
+  background-color: $title-box-color;
   width: 100%;
   height: 100%;
-  text-align: center;
-  margin: auto;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   h2 {
-    padding-top: 0.5vh;
-    -webkit-text-stroke: 0.03vw white;
+    margin-top: -0.5vh;
     text-align: center;
-    font-size: 4vw;
+    font-size: 3vw;
+    font-family: $links-font;
   }
   .touch-link-icon {
     padding-top: 3vw;
-    -webkit-text-stroke: 0.03vw white;
     font-size: 4vw;
   }
 }
 
 .media-mobile {
   .pb-content {
+    height: 90%;
+    width: 90%;
+    border-radius: 5vw;
+    margin-left: 3vw;
     .touch-link-icon {
       display: none;
     }
     h2 {
       font-size: 7vw;
-      -webkit-text-stroke: 0.1vw white;
     }
   }
   .pb-box-area {
     width: 100%;
     float: left;
   }
-}
-
-.pb-content:active {
-  border: 0.25vw solid $selected-color;
 }

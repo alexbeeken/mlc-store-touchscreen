@@ -8,6 +8,7 @@ const slideInterval = 8000;
 
 export default Ember.Component.extend({
   screen: inject.service(),
+  media: inject.service(),
   recognizers: 'swipe',
   slides: [],
   currentSlideIdx: 0,
@@ -23,12 +24,14 @@ export default Ember.Component.extend({
       this.set('currentSlideIdx', idx);
     },
     startSwitching: function(idx = 0) {
-      Ember.run.later(this, function() {
-        var currentIdx = this.get('currentSlideIdx')
-        var newIdx = (currentIdx + 1) % 4
-        this.send('switchIdx', (currentIdx + 1) % 4)
-        this.send('startSwitching', newIdx)
-      }, slideInterval)
+      if (!this.get('media.isMobile')) {
+        Ember.run.later(this, function() {
+            var currentIdx = this.get('currentSlideIdx')
+            var newIdx = (currentIdx + 1) % 4
+            this.send('switchIdx', (currentIdx + 1) % 4)
+            this.send('startSwitching', newIdx)
+        }, slideInterval)
+      }
     }
   }
 });

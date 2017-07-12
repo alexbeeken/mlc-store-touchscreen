@@ -9,30 +9,35 @@
 }
 
 .title-box {
-  background-color: $box-color;
+  background-color: $title-box-color;
   height: 5%;
   text-align: center;
 }
 
 body {
-  background-color: $background-color;
+  background: $base-white;
 }
 
 .home-link {
   position: absolute;
   width: 20%;
+  color: $base-white;
+  margin: 0.15vw;
   a {
-    font-size: 3.8vw;
+    font-size: 3.5vw;
     float: left;
-    color: inherit;
+    color: $base-white;
     text-decoration: none;
   }
 }
 
 .title-text {
   font-size: 3.1vw;
-  width: 100%;
+  width: 80%;
   text-align: center;
+  color: $base-white;
+  font-family: $title-font;
+  margin: auto;
 }
 
 .media-mobile {

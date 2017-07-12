@@ -2,7 +2,7 @@ export const content =
 {
   title: 'Tufa as a Benchmark',
   route: 'tufa',
-  linkImage: '/tufa_1962.jpg',
+  linkColor: '#5EE2AE',
   slides: [
     {
       year: '1962',

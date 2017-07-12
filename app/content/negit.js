@@ -2,7 +2,7 @@ export const content =
 {
   title: 'Negit Island',
   route: 'negit',
-  linkImage: '/negit_1993.jpg',
+  linkColor: '#D3D3D3',
   slides: [
     {
       year: '1993',

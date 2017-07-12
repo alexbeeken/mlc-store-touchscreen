@@ -5,10 +5,9 @@ const { service } = inject;
 
 export default Ember.Component.extend({
   media: inject.service(),
-  backgroundImage: computed('currentSlide', function() {
-    return "background-image: "
-      + "url('"
-      + this.get('imagePath')
-      + "');"
+  linkStyle: computed( function() {
+    return "background-color: "
+      + this.get('linkColor')
+      + ";"
   }),
 });

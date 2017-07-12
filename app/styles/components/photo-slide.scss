@@ -1,5 +1,5 @@
 .ps-container {
-  height: 90%;
+  height: 79vh;
   width: 100%;
   h1 {
     font-size: $level-text-size;
@@ -26,8 +26,9 @@
   align-items: center;
   justify-content: center;
   height: inherit;
-  min-width: 30%;
+  width: 30%;
   margin: 3vw;
+  font-family: $data-font;
   h1 {
     font-weight: bold;
   }
@@ -40,14 +41,16 @@
 }
 
 .photo-link {
-  height: 10vh;
-  width: 10vw;
-  background-size: contain;
-  background-repeat: no-repeat;
+    display: inline-block;
+  img {
+    width: auto;
+    height: 10vh;
+    max-width: 13vw;
+  }
 }
 
-.photo-link .selected {
-  border: 5vw solid $selected-color;
+.selected {
+  outline: 0.5vw solid $selected-color;
 }
 
 .photo-links {
@@ -70,15 +73,17 @@
 .media-mobile {
   .ps-container {
     height: 50%;
+    width: 100%;
   }
 
   .ps-photo {
-    margin-top: 15%;
-    max-width: 100%;
-    max-height: 100%;
+    margin: 5vh;
+    width: 100%;
+    height: 40vh;
   }
 
   .ps-photo-centering {
+    padding-top: 3vh;
     height: 40vh;
     width: 100%;
     display: flex;
@@ -93,8 +98,9 @@
     }
     .ps-data {
       float: right;
+      margin-right: 10vw;
     }
-    max-width: 100%;
+    width: 100%;
     text-align: center;
   }
 
@@ -107,12 +113,18 @@
   }
 
   .photo-link {
-    width: 10vw;
-    height: 10vh;
+    img {
+      width: auto;
+      height: 5vh;
+    }
   }
 
   .photo-links-spacer {
     width: 70%;
+  }
+
+  .selected {
+    outline: 1vw solid $selected-color;
   }
 
   h1 {
