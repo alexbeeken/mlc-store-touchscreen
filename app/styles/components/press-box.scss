@@ -26,19 +26,19 @@
   }
   .touch-link-icon {
     padding-top: 3vw;
-    -webkit-text-stroke: 0.03vw white;
     font-size: 4vw;
   }
 }
 
 .media-mobile {
   .pb-content {
+    border-radius: 5vw;
+    margin-left: -2vw;
     .touch-link-icon {
       display: none;
     }
     h2 {
       font-size: 7vw;
-      -webkit-text-stroke: 0.1vw white;
     }
   }
   .pb-box-area {
