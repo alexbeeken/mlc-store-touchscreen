@@ -15,17 +15,17 @@
 }
 
 body {
-  background: $background-color;
+  background: $base-white;
 }
 
 .home-link {
   position: absolute;
   width: 20%;
-  color: white;
+  color: $base-white;
   a {
     font-size: 3.8vw;
     float: left;
-    color: inherit;
+    color: $base-white;
     text-decoration: none;
   }
 }
@@ -34,7 +34,7 @@ body {
   font-size: 3.1vw;
   width: 100%;
   text-align: center;
-  color: white;
+  color: $base-white;
   font-family: $title-font;
 }
 
