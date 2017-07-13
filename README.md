@@ -2,7 +2,11 @@
 
 This is an Ember app that is displayed in the Mono Lake Committee store in Lee Vining, CA.
 
-You can see the latest demo [here](http://mono-lake-changing-levels.herokuapp.com). Warning: this is just for testing, may be broken at any time. You might use google Chrome's device toolbar and set the screen resolution to 1024 x 768 if the page looks broken. Responsive sizing is a lower priority because the app was built for a single device.
+You can see the latest demo [here](http://mono-lake-changing-levels.herokuapp.com). Warning: this is just for testing, may be broken at any time. 
+
+To simulate the book store's hardware, use google Chrome's device toolbar and set the screen resolution to 1024 x 768.
+
+It should work well on iPhone screen sizes and Desktop. It will function on iPad but the styling still looks funny.
 
 ## Prerequisites
 
