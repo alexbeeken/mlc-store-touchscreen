@@ -8,7 +8,9 @@ To simulate the book store's hardware, use google Chrome's device toolbar and se
 
 It should work well on iPhone screen sizes and Desktop. It will function on iPad but the styling still looks funny.
 
-## Prerequisites
+## Development
+
+### Required Programs
 
 You will need the following things properly installed on your computer.
 
@@ -16,13 +18,13 @@ You will need the following things properly installed on your computer.
 * [Node.js](https://nodejs.org/) (with NPM)
 * [Ember CLI](https://ember-cli.com/)
 
-## Installation
+### Installation
 
 * `git clone <repository-url>` this repository
 * `cd store-touchscreen`
 * `npm install`
 
-## Running / Development
+### Running
 
 * `ember serve`
 * Visit your app at [http://localhost:4200](http://localhost:4200).
