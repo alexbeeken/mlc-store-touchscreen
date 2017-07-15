@@ -1,8 +1,7 @@
 import Ember from 'ember';
 
 const {
-  Helper,
-  String
+  Helper
 } = Ember;
 
 export default Helper.extend({

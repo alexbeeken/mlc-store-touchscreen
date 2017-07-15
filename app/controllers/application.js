@@ -1,10 +1,10 @@
 import Ember from 'ember';
 import { defaults } from '../content/default';
-const { computed, inject } = Ember;
+const { inject } = Ember;
 const { service } = inject;
 
 export default Ember.Controller.extend({
-  media: inject.service(),
+  media: service(),
   title: defaults.title,
   home: defaults.home
 })

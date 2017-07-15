@@ -6,8 +6,8 @@ const { service } = inject;
 const slideInterval = 8000;
 
 export default Ember.Component.extend({
-  screen: inject.service(),
-  media: inject.service(),
+  screen: service(),
+  media: service(),
   slides: [],
   currentSlideIdx: 0,
   currentSlide: computed('slides', 'currentSlideIdx', function() {
@@ -21,7 +21,7 @@ export default Ember.Component.extend({
     switchIdx: function(idx) {
       this.set('currentSlideIdx', idx);
     },
-    startSwitching: function(idx = 0) {
+    startSwitching: function() {
       if (!this.get('media.isMobile')) {
         Ember.run.later(this, function() {
             var currentIdx = this.get('currentSlideIdx')
