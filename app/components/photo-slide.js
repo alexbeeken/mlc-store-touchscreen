@@ -2,14 +2,12 @@ import Ember from 'ember';
 
 const { computed, inject } = Ember;
 const { service } = inject;
-import RecognizerMixin from 'ember-gestures/mixins/recognizers';
 
 const slideInterval = 8000;
 
 export default Ember.Component.extend({
   screen: inject.service(),
   media: inject.service(),
-  recognizers: 'swipe',
   slides: [],
   currentSlideIdx: 0,
   currentSlide: computed('slides', 'currentSlideIdx', function() {
