@@ -23,10 +23,4 @@ export default function(){
     this.use('fade'),
     this.reverse('fade')
   );
-
-  this.transition(
-    this.childOf('.ps-container'),
-    this.toValue(function(toValue, fromValue) {return toValue < fromValue}),
-    this.use('crossFade')
-  )
 }
