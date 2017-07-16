@@ -8,10 +8,18 @@ export default Ember.Controller.extend({
   screen: service(),
   media: service(),
   links: computed( function() {
-    return [
-      negitContent,
-      tufaContent
-    ]
+    var exhibits = []
+    var content = [negitContent, tufaContent]
+    content.forEach( (content) => {
+      exhibits.push(
+        this.get('store').createRecord('exhibit', {
+          title: content.title,
+          route: content.route,
+          linkColor: content.linkColor
+        })
+      )
+    })
+    return exhibits
   }),
   showForwardArrow: computed( function() {
     return !this.get('media.isMobile') && this.get('links').length > 3
