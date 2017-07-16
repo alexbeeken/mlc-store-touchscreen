@@ -13,6 +13,7 @@ export default Ember.Component.extend({
   currentSlideIdx: 0,
   currentSlide: null,
   switchReturnValue: null,
+  switchDelayReturnValue: null,
   init: function() {
     this._super();
     this.send('switchDelay');
@@ -27,10 +28,12 @@ export default Ember.Component.extend({
       this.send('switchDelay')
     },
     switchDelay: function() {
+      run.cancel(this.get('switchDelayReturnValue'))
       run.cancel(this.get('switchReturnValue'))
-      run.later(this, function() {
+      var returnValue = run.later(this, function() {
           this.send('startSwitching')
       }, switchDelayTime)
+      this.set('switchDelayReturnValue', returnValue)
     },
     startSwitching: function() {
       if (!this.get('media.isMobile')) {

@@ -27,7 +27,6 @@ export default function(){
   this.transition(
     this.childOf('.ps-container'),
     this.toValue(function(toValue, fromValue) {return toValue < fromValue}),
-    this.use('toRight'),
-    this.reverse('toLeft')
+    this.use('crossFade')
   )
 }
