@@ -10,9 +10,7 @@ export default Ember.Component.extend({
   media: service(),
   slides: [],
   currentSlideIdx: 0,
-  currentSlide: computed('slides', 'currentSlideIdx', function() {
-    return this.get('slides')[this.get('currentSlideIdx')]
-  }),
+  currentSlide: null,
   init: function() {
     this._super();
     this.send('startSwitching');
@@ -20,6 +18,7 @@ export default Ember.Component.extend({
   actions: {
     switchIdx: function(idx) {
       this.set('currentSlideIdx', idx);
+      this.set('currentSlide', this.get('slides')[idx])
     },
     startSwitching: function() {
       if (!this.get('media.isMobile')) {

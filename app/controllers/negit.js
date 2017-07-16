@@ -16,5 +16,9 @@ export default Ember.Controller.extend({
       )
     })
     return photos
+  }),
+  firstSlide: computed( function() {
+    var slides = this.get('slides')
+    return slides[0]
   })
 })

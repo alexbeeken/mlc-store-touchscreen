@@ -1,5 +1,5 @@
 <div class='ps-container'>
-  {{#liquid-bind currentSlideIdx}}
+  {{#liquid-bind currentSlide as |currentSlide|}}
     <div class='ps-photo-centering'>
       <div class='ps-photo' style="background-image: url('{{currentSlide.path}}');">
         {{#if media.isMobile}}
