@@ -1,9 +1,10 @@
 import Ember from 'ember';
 
-const { computed, inject } = Ember;
+const { computed, inject, run } = Ember;
 const { service } = inject;
 
-const slideInterval = 8000;
+const slideInterval = 6000;
+const switchDelayTime = 4000;
 
 export default Ember.Component.extend({
   screen: service(),
@@ -14,7 +15,7 @@ export default Ember.Component.extend({
   switchReturnValue: null,
   init: function() {
     this._super();
-    this.send('startSwitching');
+    this.send('switchDelay');
   },
   actions: {
     switchIdx: function(idx) {
@@ -22,18 +23,22 @@ export default Ember.Component.extend({
       this.set('currentSlide', this.get('slides')[idx])
     },
     switchIdxManually: function(idx) {
-      this.set('currentSlideIdx', idx)
-      this.set('currentSlide', this.get('slides')[idx])
-      Ember.run.cancel(this.get('switchReturnValue'))
-      this.send('startSwitching')
+      this.send('switchIdx', idx)
+      this.send('switchDelay')
+    },
+    switchDelay: function() {
+      run.cancel(this.get('switchReturnValue'))
+      run.later(this, function() {
+          this.send('startSwitching')
+      }, switchDelayTime)
     },
     startSwitching: function() {
       if (!this.get('media.isMobile')) {
-        var returnValue = Ember.run.later(this, function() {
+        var returnValue = run.later(this, function() {
             var currentIdx = this.get('currentSlideIdx')
             var newIdx = (currentIdx + 1) % 4
             this.send('switchIdx', (currentIdx + 1) % 4)
-            this.send('startSwitching', newIdx)
+            this.send('startSwitching')
         }, slideInterval)
         this.set('switchReturnValue', returnValue)
       }
