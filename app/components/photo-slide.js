@@ -1,6 +1,6 @@
 import Ember from 'ember';
 
-const { computed, inject, run } = Ember;
+const { inject, run } = Ember;
 const { service } = inject;
 
 const slideInterval = 6000;
@@ -39,7 +39,6 @@ export default Ember.Component.extend({
       if (!this.get('media.isMobile')) {
         var returnValue = run.later(this, function() {
             var currentIdx = this.get('currentSlideIdx')
-            var newIdx = (currentIdx + 1) % 4
             this.send('switchIdx', (currentIdx + 1) % 4)
             this.send('startSwitching')
         }, slideInterval)
