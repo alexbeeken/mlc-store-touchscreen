@@ -36,6 +36,9 @@ export default Ember.Component.extend({
       this.set('switchDelayReturnValue', returnValue)
     },
     startSwitching: function() {
+      if (this.isDestroyed) {
+        return;
+      }
       if (!this.get('media.isMobile')) {
         var returnValue = run.later(this, function() {
             var currentIdx = this.get('currentSlideIdx')
