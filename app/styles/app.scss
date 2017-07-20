@@ -6,16 +6,16 @@
 @import "components/photo-slide";
 
 @font-face {
-    font-family: Bevan;
-    src: url(fonts/Bevan-Regular.ttf);
+    font-family: 'Bevan';
+    src: local('Bevan'), url(src/fonts/Bevan-Regular.ttf);
 }
 
 @font-face {
-    font-family: Paytone One;
-    src: url(fonts/PaytoneOne.ttf);
+    font-family: 'Paytone One';
+    src: local('Paytone One'), url(fonts/PaytoneOne.ttf);
 }
 
 @font-face {
-    font-family: Shanti;
-    src: url(fonts/Shanti-Regular.ttf);
+    font-family: 'Shanti';
+    src: local('Shanti'), url(fonts/Shanti-Regular.ttf);
 }
