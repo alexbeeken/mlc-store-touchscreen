@@ -6,7 +6,7 @@
       {{/if}}
     </div>
     {{#each exhibits as |exhibit|}}
-      {{#press-box href=exhibit.route linkColor=exhibit.linkColor}}
+      {{#press-box exhibit=exhibit}}
         <div class='link-title'>
           <h2>{{upper exhibit.title}}</h2>
         </div>
