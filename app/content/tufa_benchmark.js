@@ -1,4 +1,4 @@
-export const content =
+export const tufaContent =
 {
   title: 'Tufa as a Benchmark',
   route: 'tufa',

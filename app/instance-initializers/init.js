@@ -1,12 +1,9 @@
-import { content as negitContent } from '../content/negit';
-import { content as tufaContent } from '../content/tufa_benchmark';
+import { defaults } from '../content/default';
 
 export function initialize(appInstance) {
   let store = appInstance.lookup('service:store')
-  var exhibits = [
-    negitContent,
-    tufaContent
-  ]
+  var exhibits = defaults.exhibits
+
   exhibits.forEach( (exhibit) => {
     exhibit.slides.forEach( (photo) => {
       store.createRecord('photo', {

@@ -5,10 +5,10 @@
         <icon class="glyphicon glyphicon-triangle-left"></icon>
       {{/if}}
     </div>
-    {{#each links as |link|}}
-      {{#press-box href=link.route linkColor=link.linkColor}}
+    {{#each exhibits as |exhibit|}}
+      {{#press-box href=exhibit.id linkColor=exhibit.linkColor}}
         <div class='link-title'>
-          <h2>{{upper link.title}}</h2>
+          <h2>{{upper exhibit.title}}</h2>
         </div>
       {{/press-box}}
     {{/each}}

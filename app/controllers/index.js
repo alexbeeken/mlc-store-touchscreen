@@ -7,13 +7,13 @@ import { content as tufaContent } from '../content/tufa_benchmark';
 export default Ember.Controller.extend({
   screen: service(),
   media: service(),
-  links: computed( function() {
+  exhibits: computed( function() {
     return this.store.peekAll('exhibit')
   }),
   showForwardArrow: computed( function() {
-    return !this.get('media.isMobile') && this.get('links').length > 3
+    return !this.get('media.isMobile') && this.get('exhibits').length > 3
   }),
   showBackArrow: computed( function() {
-    return !this.get('media.isMobile') && this.get('links').length > 3
+    return !this.get('media.isMobile') && this.get('exhibits').length > 3
   })
 })
