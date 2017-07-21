@@ -1,11 +1,11 @@
 import Ember from 'ember';
-import { content } from '../content/tufa_benchmark';
+import { tufaContent } from '../content/tufa_benchmark';
 import { defaults } from '../content/default';
 
 export default Ember.Route.extend({
   setupController: function() {
     this.controllerFor('application').set('home', true);
-    this.controllerFor('application').set('title', content.title);
+    this.controllerFor('application').set('title', tufaContent.title);
   },
 
   resetController() {
