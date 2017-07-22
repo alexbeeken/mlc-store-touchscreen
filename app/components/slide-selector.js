@@ -20,7 +20,7 @@ export default Ember.Component.extend({
     this.get('slides')[0]
   }),
   showingSlideIdx: 0,
-  referenceIdx: computed('currentSlideIdx', function() {
+  referenceIdx: computed('currentSlideIdx', 'showingSlideIdx', function() {
     var currentIdx = this.get('currentSlideIdx')
     var showingIdx = this.get('showingSlideIdx')
     var difference = currentIdx - showingIdx
