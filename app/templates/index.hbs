@@ -1,11 +1,11 @@
 <div class='index-links'>
   <div class='touch-links'>
     <div class='nav-icon forward-icon'>
-      {{#if showForwardArrow}}
-        <icon class="glyphicon glyphicon-triangle-left"></icon>
+      {{#if showBackArrow}}
+        <icon class="glyphicon glyphicon-triangle-left" {{action 'changeIdx' -1}}></icon>
       {{/if}}
     </div>
-    {{#each exhibits as |exhibit|}}
+    {{#each showingExhibits as |exhibit|}}
       {{#press-box exhibit=exhibit}}
         <div class='link-title'>
           <h2>{{upper exhibit.title}}</h2>
@@ -13,8 +13,8 @@
       {{/press-box}}
     {{/each}}
     <div class='nav-icon backward-icon'>
-      {{#if showBackArrow}}
-        <icon class="glyphicon glyphicon-triangle-right"></icon>
+      {{#if showForwardArrow}}
+        <icon class="glyphicon glyphicon-triangle-right" {{action 'changeIdx' 1}}></icon>
       {{/if}}
     </div>
   </div>
