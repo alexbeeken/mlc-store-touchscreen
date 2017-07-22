@@ -10,17 +10,21 @@
     </div>
     {{#each showingSlides as |slide index|}}
       {{#if (eq referenceIdx index)}}
-        <a {{action 'switchIdxManually' index}}>
-          <div class='photo-link selected'>
-            <img src={{slide.path}}>
-          </div>
-        </a>
+        {{liquid-bind slide}}
+          <a {{action 'switchIdxManually' index}}>
+            <div class='photo-link selected'>
+              <img src={{slide.path}}>
+            </div>
+          </a>
+        {{/liquid-bind}}
       {{else}}
-        <a {{action 'switchIdxManually' index}}>
-          <div class='photo-link'>
-            <img src={{slide.path}}>
-          </div>
-        </a>
+        {{liquid-bind slide}}
+           <a {{action 'switchIdxManually' index}}>
+             <div class='photo-link'>
+               <img src={{slide.path}}>
+             </div>
+           </a>
+         {{/liquid-bind}}
       {{/if}}
     {{/each}}
     <div class='backward-icon'>
