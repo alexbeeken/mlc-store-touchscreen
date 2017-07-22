@@ -8,8 +8,12 @@ export default Ember.Controller.extend({
     return this.store.peekAll('exhibit').toArray()
   }),
   showingExhibits: computed('currentShowingIdx', function() {
-    var idx = this.get('currentShowingIdx')
-    return this.get('exhibits').slice(idx, idx+3)
+    if (this.get('media.isMobile')) {
+      return this.get('exhibits')
+    } else {
+      var idx = this.get('currentShowingIdx')
+      return this.get('exhibits').slice(idx, idx+3)
+    }
   }),
   currentShowingIdx: 0,
   showForwardArrow: computed('currentShowingIdx', function() {
