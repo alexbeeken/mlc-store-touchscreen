@@ -16,10 +16,19 @@ export default Ember.Component.extend({
     var idx = this.get('showingSlideIdx')
     return this.get('slides').slice(idx, idx+4)
   }),
-  currentSlideId: computed( function() {
-    this.get('showingSlides')[0]
+  currentSlideIdx: computed( function() {
+    this.get('slides')[0]
   }),
   showingSlideIdx: 0,
+  referenceIdx: computed('currentSlideIdx', function() {
+    var currentIdx = this.get('currentSlideIdx')
+    var showingIdx = this.get('showingSlideIdx')
+    var difference = currentIdx - showingIdx
+    if (difference >= 0 && difference <= 3) {
+      return difference
+    }
+    return null
+  }),
   currentSlide: computed( function() {
     return this.get('slides').toArray()[0]
   }),
