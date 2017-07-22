@@ -18,6 +18,9 @@ export default Ember.Component.extend({
   }),
   currentSlideIdx: 0,
   showingSlideIdx: 0,
+  adjustedIndex: computed('showingSlideIdx', 'currentSlideIdx', function() {
+    return this.get('currentSlideIdx') + this.get('showingSlideIdx')
+  }),
   currentSlide: computed( function() {
     return this.get('slides').toArray()[0]
   }),
@@ -59,7 +62,7 @@ export default Ember.Component.extend({
       if (!this.get('media.isMobile')) {
         var returnValue = run.later(this, function() {
             var currentIdx = this.get('currentSlideIdx')
-            this.send('switchIdx', (currentIdx + 1) % 4)
+            this.send('switchIdx', (currentIdx + 1) % this.get('slides').length)
             this.send('startSwitching')
         }, slideInterval)
         this.set('switchReturnValue', returnValue)

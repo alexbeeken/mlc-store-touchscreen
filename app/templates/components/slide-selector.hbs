@@ -1,9 +1,7 @@
-<div class='ps-container'>
-  {{photo-slide slide=currentSlide}}
-</div>
+{{photo-slide slide=currentSlide}}
 <div class='photo-links'>
   <div class='photo-links-spacer'>
-    <div class='nav-icon forward-icon'>
+    <div class='forward-icon'>
       <div class='arrow-placeholder'>
         {{#if showBackArrow}}
           <icon class='glyphicon glyphicon-triangle-left' {{action 'changeShowingIdx' -1}}></icon>
@@ -11,7 +9,7 @@
       </div>
     </div>
     {{#each showingSlides as |slide index|}}
-      {{#if (eq currentSlideIdx index)}}
+      {{#if (eq currentSlide.id index)}}
         <a {{action 'switchIdxManually' index}}>
           <div class='photo-link selected'>
             <img src={{slide.path}}>
@@ -25,7 +23,7 @@
         </a>
       {{/if}}
     {{/each}}
-    <div class='nav-icon backward-icon'>
+    <div class='backward-icon'>
       <div class='arrow-placeholder'>
         {{#if showForwardArrow}}
           <icon class='glyphicon glyphicon-triangle-right' {{action 'changeShowingIdx' 1}}></icon>

@@ -1,15 +1,17 @@
-.forward-icon {
-  font-size: 5vw;
-  align-self: center;
-}
+.photo-links {
+  .forward-icon {
+    font-size: 5vw;
+    align-self: center;
+  }
 
-.backward-icon {
-  font-size: 5vw;
-  align-self: center;
-}
+  .backward-icon {
+    font-size: 5vw;
+    align-self: center;
+  }
 
-.arrow-placeholder {
-  height: inherit;
-  display: flex;
-  width: 5vw;
+  .arrow-placeholder {
+    height: inherit;
+    display: flex;
+    width: 5vw;
+  }
 }

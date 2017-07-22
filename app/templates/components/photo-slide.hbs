@@ -1,19 +1,21 @@
-{{#liquid-bind slide use='crossFade' as |slide|}}
-  <div class='ps-photo-centering'>
-    <div class='ps-photo' style="background-image: url('{{slide.path}}');">
-      {{#if media.isMobile}}
-        <a {{action 'switchIdx' on='swipeRight'}}>
-        </a>
-      {{/if}}
+<div class='ps-container'>
+  {{#liquid-bind slide use='crossFade' as |slide|}}
+    <div class='ps-photo-centering'>
+      <div class='ps-photo' style="background-image: url('{{slide.path}}');">
+        {{#if media.isMobile}}
+          <a {{action 'switchIdx' on='swipeRight'}}>
+          </a>
+        {{/if}}
+      </div>
     </div>
-  </div>
-  <div class='ps-titles'>
-    <div class='ps-year'>
-      <h1>{{slide.year}}</h1>
+    <div class='ps-titles'>
+      <div class='ps-year'>
+        <h1>{{slide.year}}</h1>
+      </div>
+      <div class='ps-data'>
+        <h2>{{slide.levelFeet}}</h2>
+        <h3>{{slide.levelMeter}}</h3>
+      </div>
     </div>
-    <div class='ps-data'>
-      <h2>{{slide.levelFeet}}</h2>
-      <h3>{{slide.levelMeter}}</h3>
-    </div>
-  </div>
-{{/liquid-bind}}
+  {{/liquid-bind}}
+</div>
