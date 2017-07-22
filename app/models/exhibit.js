@@ -4,5 +4,5 @@ export default DS.Model.extend({
   title: DS.attr('string'),
   route: DS.attr('string'),
   linkColor: DS.attr('string'),
-  photo: DS.hasMany('photo')
+  photos: DS.hasMany('photo')
 });

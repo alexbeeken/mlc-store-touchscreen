@@ -1,14 +1,13 @@
 import Ember from 'ember';
-const { computed } = Ember;
+const { computed, inject } = Ember;
+const { service } = inject;
 
 export default Ember.Controller.extend({
-  slides: computed( function() {
-    return this.store.peekAll('photo').filter( (item) => {
-      return item.get('exhibit')=='negit';
-    })
+  store: service(),
+  slides: computed('model', function() {
+    return this.get('model.photos').toArray()
   }),
   firstSlide: computed( function() {
-    var slides = this.get('slides')
-    return slides[0]
+    return this.get('slides')[0]
   })
 })
