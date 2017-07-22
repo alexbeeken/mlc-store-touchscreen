@@ -1,14 +1,16 @@
 import Ember from 'ember';
 
-const { computed, inject } = Ember;
+const { computed, inject, String } = Ember;
 const { service } = inject;
+const { htmlSafe } = String;
 
 export default Ember.Component.extend({
   media: service(),
   exhibit: null,
   linkStyle: computed( function() {
-    return "background-color: "
-      + this.get('exhibit.linkColor')
-      + ";"
+    var color = this.get('exhibit.linkColor')
+    return htmlSafe("background-color: "
+        + color
+        + ";")
   }),
 });

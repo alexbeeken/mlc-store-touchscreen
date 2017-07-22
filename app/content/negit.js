@@ -1,4 +1,4 @@
-export const negitContent =
+export const negit =
 {
   title: 'Negit Island',
   route: 'negit',
