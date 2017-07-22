@@ -1,5 +1,5 @@
 import Ember from 'ember';
-import { index } from '../content/index';
+import { defaults } from '../content/index';
 const { inject } = Ember;
 const { service } = inject;
 
@@ -14,7 +14,7 @@ export default Ember.Route.extend({
     this.controllerFor('application').set('title', model.get('title'));
   },
   resetController() {
-    this.controllerFor('application').set('home', index.home);
-    this.controllerFor('application').set('title', index.title);
+    this.controllerFor('application').set('home', defaults.home);
+    this.controllerFor('application').set('title', defaults.title);
   }
 });
