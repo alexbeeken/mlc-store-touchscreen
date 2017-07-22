@@ -1,5 +1,5 @@
 import Ember from 'ember';
-import { defaults } from '../content/default';
+import { defaults } from '../content/index';
 const { inject } = Ember;
 const { service } = inject;
 

@@ -1,4 +1,4 @@
-import { defaults } from '../content/default';
+import { defaults } from '../content/index';
 
 export function initialize(appInstance) {
   let store = appInstance.lookup('service:store')
