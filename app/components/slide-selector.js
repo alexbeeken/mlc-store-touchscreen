@@ -47,14 +47,8 @@ export default Ember.Component.extend({
     && this.get('slides').length > 2
   }),
   actions: {
-    switchIdx: function(id) {
-      this.set('currentSlideId', id)
-      var currentSlide;
-      currentSlide = this.get('slides').forEach(function(slide) {
-        if (slide.id === id) {
-          return slide
-        }
-      })
+    switchIdx: function(idx) {
+      this.set('currentSlideIdx', idx)
       this.set('currentSlide', currentSlide)
     },
     switchIdxManually: function(idx) {
