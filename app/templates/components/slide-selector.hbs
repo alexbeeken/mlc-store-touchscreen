@@ -3,7 +3,14 @@
 </div>
 <div class='photo-links'>
   <div class='photo-links-spacer'>
-    {{#each slides as |slide index|}}
+    <div class='nav-icon forward-icon'>
+      <div class='arrow-placeholder'>
+        {{#if showBackArrow}}
+          <icon class='glyphicon glyphicon-triangle-left' {{action 'changeShowingIdx' -1}}></icon>
+        {{/if}}
+      </div>
+    </div>
+    {{#each showingSlides as |slide index|}}
       {{#if (eq currentSlideIdx index)}}
         <a {{action 'switchIdxManually' index}}>
           <div class='photo-link selected'>
@@ -18,5 +25,12 @@
         </a>
       {{/if}}
     {{/each}}
+    <div class='nav-icon backward-icon'>
+      <div class='arrow-placeholder'>
+        {{#if showForwardArrow}}
+          <icon class='glyphicon glyphicon-triangle-right' {{action 'changeShowingIdx' 1}}></icon>
+        {{/if}}
+      </div>
+    </div>
   </div>
 </div>

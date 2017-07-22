@@ -31,7 +31,6 @@ export default Ember.Controller.extend({
       var idx = this.get('currentShowingIdx')
       var newIdx = idx+change
       this.set('currentShowingIdx', newIdx)
-      console.log(this.get('currentShowingIdx'))
     }
   }
 })

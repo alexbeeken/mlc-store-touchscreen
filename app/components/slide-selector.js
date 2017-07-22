@@ -12,11 +12,12 @@ export default Ember.Component.extend({
   slides: computed( function() {
     return this.get('exhibit.photos').toArray()
   }),
-  showingSlides: computed('currentSlideIdx', function() {
-    var idx = this.get('currentSlideIdx')
-    return this.get('slice').slice(idx, idx+4)
+  showingSlides: computed('showingSlideIdx', function() {
+    var idx = this.get('showingSlideIdx')
+    return this.get('slides').slice(idx, idx+4)
   }),
   currentSlideIdx: 0,
+  showingSlideIdx: 0,
   currentSlide: computed( function() {
     return this.get('slides').toArray()[0]
   }),
@@ -26,6 +27,14 @@ export default Ember.Component.extend({
     this._super();
     this.send('switchDelay');
   },
+  showForwardArrow: computed('showingSlideIdx', function() {
+    return this.get('showingSlideIdx') < (this.get('slides').length - 4)
+    && this.get('slides').length > 2
+  }),
+  showBackArrow: computed('showingSlideIdx', function() {
+    return this.get('showingSlideIdx') > 0
+    && this.get('slides').length > 2
+  }),
   actions: {
     switchIdx: function(idx) {
       this.set('currentSlideIdx', idx)
@@ -55,6 +64,11 @@ export default Ember.Component.extend({
         }, slideInterval)
         this.set('switchReturnValue', returnValue)
       }
+    },
+    changeShowingIdx: function(change) {
+      var idx = this.get('showingSlideIdx')
+      var newIdx = idx+change
+      this.set('showingSlideIdx', newIdx)
     }
   }
 });
