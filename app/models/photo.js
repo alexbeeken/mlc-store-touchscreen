@@ -7,5 +7,5 @@ export default Model.extend({
   levelMeter: DS.attr('string'),
   levelFeet: DS.attr('string'),
   path: DS.attr('string'),
-  exhibit: DS.attr('string')
+  exhibit: DS.belongsTo('exhibit')
 });

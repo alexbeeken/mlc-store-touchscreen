@@ -1,17 +1,21 @@
 import Ember from 'ember';
 
-const { inject, run } = Ember;
+const { inject, run, computed } = Ember;
 const { service } = inject;
 
 const slideInterval = 6000;
 const switchDelayTime = 4000;
 
 export default Ember.Component.extend({
-  screen: service(),
+  exhibit: null,
   media: service(),
-  slides: [],
+  slides: computed( function() {
+    return this.get('exhibit.photos').toArray()
+  }),
   currentSlideIdx: 0,
-  currentSlide: null,
+  currentSlide: computed( function() {
+    return this.get('slides').toArray()[0]
+  }),
   switchReturnValue: null,
   switchDelayReturnValue: null,
   init: function() {

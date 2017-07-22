@@ -7,10 +7,8 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('index', { path: '/' });
-  this.route('negit');
-  this.route('tufa');
-  this.route('future');
+  this.route('index', { path: '/' })
+  this.route('exhibit', { path: 'exhibit/:id'})
 });
 
 export default Router;
