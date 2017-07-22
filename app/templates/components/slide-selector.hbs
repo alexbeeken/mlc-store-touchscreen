@@ -1,0 +1,22 @@
+<div class='ps-container'>
+  {{photo-slide slide=currentSlide}}
+</div>
+<div class='photo-links'>
+  <div class='photo-links-spacer'>
+    {{#each slides as |slide index|}}
+      {{#if (eq currentSlideIdx index)}}
+        <a {{action 'switchIdxManually' index}}>
+          <div class='photo-link selected'>
+            <img src={{slide.path}}>
+          </div>
+        </a>
+      {{else}}
+        <a {{action 'switchIdxManually' index}}>
+          <div class='photo-link'>
+            <img src={{slide.path}}>
+          </div>
+        </a>
+      {{/if}}
+    {{/each}}
+  </div>
+</div>

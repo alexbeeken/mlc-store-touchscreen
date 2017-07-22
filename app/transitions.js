@@ -23,4 +23,11 @@ export default function(){
     this.use('fade'),
     this.reverse('fade')
   );
+
+  this.transition(
+    this.childOf('pb-box-area'),
+    this.use('toDown'),
+    this.reverse('toUp')
+  );
+
 }
