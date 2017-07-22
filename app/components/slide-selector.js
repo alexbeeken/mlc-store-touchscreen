@@ -16,11 +16,10 @@ export default Ember.Component.extend({
     var idx = this.get('showingSlideIdx')
     return this.get('slides').slice(idx, idx+4)
   }),
-  currentSlideIdx: 0,
-  showingSlideIdx: 0,
-  adjustedIndex: computed('showingSlideIdx', 'currentSlideIdx', function() {
-    return this.get('currentSlideIdx') + this.get('showingSlideIdx')
+  currentSlideId: computed( function() {
+    this.get('showingSlides')[0]
   }),
+  showingSlideIdx: 0,
   currentSlide: computed( function() {
     return this.get('slides').toArray()[0]
   }),
@@ -39,9 +38,15 @@ export default Ember.Component.extend({
     && this.get('slides').length > 2
   }),
   actions: {
-    switchIdx: function(idx) {
-      this.set('currentSlideIdx', idx)
-      this.set('currentSlide', this.get('slides')[idx])
+    switchIdx: function(id) {
+      this.set('currentSlideId', id)
+      var currentSlide;
+      currentSlide = this.get('slides').forEach(function(slide) {
+        if (slide.id === id) {
+          return slide
+        }
+      })
+      this.set('currentSlide', currentSlide)
     },
     switchIdxManually: function(idx) {
       this.send('switchIdx', idx)

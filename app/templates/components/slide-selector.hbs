@@ -8,8 +8,8 @@
         {{/if}}
       </div>
     </div>
-    {{#each showingSlides as |slide index|}}
-      {{#if (eq currentSlide.id index)}}
+    {{#each showingSlides as |slide|}}
+      {{#if (eq currentSlide slide)}}
         <a {{action 'switchIdxManually' index}}>
           <div class='photo-link selected'>
             <img src={{slide.path}}>
