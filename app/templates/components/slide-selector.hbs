@@ -1,0 +1,40 @@
+{{photo-slide slide=currentSlide}}
+<div class='photo-links'>
+  <div class='photo-links-spacer'>
+    <div class='forward-icon'>
+      <div class='arrow-placeholder'>
+        {{#if showBackArrow}}
+          <icon class='glyphicon glyphicon-triangle-left' {{action 'changeShowingIdx' -1}}></icon>
+        {{/if}}
+      </div>
+    </div>
+    {{#each showingSlides as |slide index|}}
+      {{#if (eq referenceIdx index)}}
+        <div class='selected'>
+          {{#liquid-bind slide}}
+            <a {{action 'switchIdxManually' index}}>
+              <div class='photo-link'>
+                <img src={{slide.path}}>
+              </div>
+            </a>
+          {{/liquid-bind}}
+        </div>
+      {{else}}
+        {{#liquid-bind slide}}
+          <a {{action 'switchIdxManually' index}}>
+            <div class='photo-link'>
+              <img src={{slide.path}}>
+            </div>
+          </a>
+        {{/liquid-bind}}
+      {{/if}}
+    {{/each}}
+    <div class='backward-icon'>
+      <div class='arrow-placeholder'>
+        {{#if showForwardArrow}}
+          <icon class='glyphicon glyphicon-triangle-right' {{action 'changeShowingIdx' 1}}></icon>
+        {{/if}}
+      </div>
+    </div>
+  </div>
+</div>

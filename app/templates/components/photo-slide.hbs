@@ -1,7 +1,7 @@
 <div class='ps-container'>
-  {{#liquid-bind currentSlide use='crossFade' as |currentSlide|}}
+  {{#liquid-bind slide use='crossFade' as |slide|}}
     <div class='ps-photo-centering'>
-      <div class='ps-photo' style="background-image: url('{{currentSlide.path}}');">
+      <div class='ps-photo' style="background-image: url('{{slide.path}}');">
         {{#if media.isMobile}}
           <a {{action 'switchIdx' on='swipeRight'}}>
           </a>
@@ -10,31 +10,12 @@
     </div>
     <div class='ps-titles'>
       <div class='ps-year'>
-        <h1>{{currentSlide.year}}</h1>
+        <h1>{{slide.year}}</h1>
       </div>
       <div class='ps-data'>
-        <h2>{{currentSlide.levelFeet}}</h2>
-        <h3>{{currentSlide.levelMeter}}</h3>
+        <h2>{{slide.levelFeet}}</h2>
+        <h3>{{slide.levelMeter}}</h3>
       </div>
     </div>
   {{/liquid-bind}}
-</div>
-<div class='photo-links'>
-  <div class='photo-links-spacer'>
-    {{#each slides as |slide index|}}
-      {{#if (eq currentSlideIdx index)}}
-        <a {{action 'switchIdxManually' index}}>
-          <div class='photo-link selected'>
-            <img src={{slide.path}}>
-          </div>
-        </a>
-      {{else}}
-        <a {{action 'switchIdxManually' index}}>
-          <div class='photo-link'>
-            <img src={{slide.path}}>
-          </div>
-        </a>
-      {{/if}}
-    {{/each}}
-  </div>
 </div>
