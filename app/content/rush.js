@@ -2,7 +2,7 @@ export const rush =
 {
   title: 'Rush Creek',
   route: 'rush',
-  linkColor: '#D3D3D3',
+  linkColor: '#79a33f',
   slides: [
     {
       year: 'May 2, 1948',
