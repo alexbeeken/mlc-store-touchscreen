@@ -40,7 +40,7 @@ export default Ember.Component.extend({
     var idx = this.get('showingSlideIdx')
     return this.get('slides').slice(idx, idx+photoCount)
   }),
-  slideCount: computed( function() { this.get('slides').length }),
+  slideCount: computed( function() { return this.get('slides').length }),
   slides: computed( function() {
     return this.get('exhibit.photos').toArray()
   }),
