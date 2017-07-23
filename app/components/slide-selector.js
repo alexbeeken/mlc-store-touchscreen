@@ -1,53 +1,52 @@
-import Ember from 'ember';
+import Ember from 'ember'
 
-const { inject, run, computed } = Ember;
-const { service } = inject;
+const { inject, run, computed } = Ember
+const { service } = inject
 
-const slideInterval = 6000;
-const switchDelayTime = 4000;
+const slideInterval = 6000
+const switchDelayTime = 4000
 const photoCount = 4
 
 export default Ember.Component.extend({
-  exhibit: null,
   media: service(),
-  slides: computed( function() {
-    return this.get('exhibit.photos').toArray()
-  }),
-  showingSlides: computed('showingSlideIdx', 'currentSlideIdx', function() {
-    var idx = this.get('showingSlideIdx')
-    return this.get('slides').slice(idx, idx+photoCount)
-  }),
-  currentSlideIdx: computed( function() {
-    this.get('slides')[0]
-  }),
-  showingSlideIdx: 0,
-  referenceIdx: computed('currentSlideIdx', 'showingSlideIdx', function() {
-    var currentIdx = this.get('currentSlideIdx')
-    var showingIdx = this.get('showingSlideIdx')
-    var difference = currentIdx - showingIdx
-    if (difference >= 0 && difference <= (photoCount - 1)) {
-      return difference
-    } else {
-      return null
-    }
-  }),
   currentSlide: computed( function() {
+    // initial value, gets overwritten
     return this.get('slides').toArray()[0]
   }),
-  switchReturnValue: null,
-  switchDelayReturnValue: null,
+  currentSlideIdx: computed( function() {
+    // initial value, gets overwritten
+    this.get('slides')[0]
+  }),
+  exhibit: null,
   init: function() {
     this._super();
     this.send('switchDelay');
   },
-  showForwardArrow: computed('showingSlideIdx', function() {
-    return this.get('showingSlideIdx') < (this.get('slides').length - photoCount)
-    && this.get('slides').length > 2
+  referenceIdx: computed('currentSlideIdx', 'showingSlideIdx', function() {
+    var difference = this.get('currentSlideIdx') - this.get('showingSlideIdx')
+    if (difference >= 0 && difference <= (photoCount - 1)) {
+      return difference
+    }
+    return null
   }),
   showBackArrow: computed('showingSlideIdx', function() {
     return this.get('showingSlideIdx') > 0
     && this.get('slides').length > 2
   }),
+  showForwardArrow: computed('showingSlideIdx', function() {
+    return this.get('showingSlideIdx') < (this.get('slides').length - photoCount)
+    && this.get('slides').length > 2
+  }),
+  showingSlideIdx: 0,
+  showingSlides: computed('showingSlideIdx', 'currentSlideIdx', function() {
+    var idx = this.get('showingSlideIdx')
+    return this.get('slides').slice(idx, idx+photoCount)
+  }),
+  slides: computed( function() {
+    return this.get('exhibit.photos').toArray()
+  }),
+  switchReturnValue: null,
+  switchDelayReturnValue: null,
   actions: {
     switchIdx: function(refIdx) {
       this.set('currentSlideIdx', refIdx)
@@ -73,8 +72,8 @@ export default Ember.Component.extend({
       }
       if (!this.get('media.isMobile')) {
         var returnValue = run.later(this, function() {
-            var currentIdx = this.get('currentSlideIdx')
-            this.send('switchIdx', (currentIdx + 1) % this.get('slides').length)
+            var currentSlideIdx = this.get('currentSlideIdx')
+            this.send('switchIdx', (currentSlideIdx + 1) % this.get('slides').length)
             this.send('startSwitching')
         }, slideInterval)
         this.set('switchReturnValue', returnValue)
