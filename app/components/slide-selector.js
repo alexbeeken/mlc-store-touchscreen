@@ -61,7 +61,9 @@ export default Ember.Component.extend({
       run.cancel(this.get('switchDelayReturnValue'))
       run.cancel(this.get('switchReturnValue'))
       var returnValue = run.later(this, function() {
+        if (!this.get('media.isMobile')) {
           this.send('startSwitching')
+        }
       }, switchDelayTime)
       this.set('switchDelayReturnValue', returnValue)
     },
@@ -69,14 +71,12 @@ export default Ember.Component.extend({
       if (this.isDestroyed) {
         return;
       }
-      if (!this.get('media.isMobile')) {
-        var returnValue = run.later(this, function() {
-            var currentSlideIdx = this.get('currentSlideIdx')
-            this.send('switchIdx', (currentSlideIdx + 1) % this.get('slideCount'))
-            this.send('startSwitching')
-        }, slideInterval)
-        this.set('switchReturnValue', returnValue)
-      }
+      var returnValue = run.later(this, function() {
+          var currentSlideIdx = this.get('currentSlideIdx')
+          this.send('switchIdx', (currentSlideIdx + 1) % this.get('slideCount'))
+          this.send('startSwitching')
+      }, slideInterval)
+      this.set('switchReturnValue', returnValue)
     },
     changeShowingIdx: function(change) {
       var idx = this.get('showingSlideIdx')
