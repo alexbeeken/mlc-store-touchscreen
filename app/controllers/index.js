@@ -2,6 +2,8 @@ import Ember from 'ember';
 const { computed, inject } = Ember;
 const { service } = inject;
 
+const pageCount = 3
+
 export default Ember.Controller.extend({
   media: service(),
   exhibits: computed( function() {
@@ -12,13 +14,13 @@ export default Ember.Controller.extend({
       return this.get('exhibits')
     } else {
       var idx = this.get('currentShowingIdx')
-      return this.get('exhibits').slice(idx, idx+3)
+      return this.get('exhibits').slice(idx, idx+pageCount)
     }
   }),
   currentShowingIdx: 0,
   showForwardArrow: computed('currentShowingIdx', function() {
     return !this.get('media.isMobile')
-    && this.get('currentShowingIdx') < (this.get('exhibits').length - 3)
+    && this.get('currentShowingIdx') < (this.get('exhibits').length - pageCount)
     && this.get('exhibits').length > 2
   }),
   showBackArrow: computed('currentShowingIdx', function() {
