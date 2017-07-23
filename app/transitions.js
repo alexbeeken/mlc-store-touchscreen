@@ -29,29 +29,5 @@ export default function(){
     this.use('toDown'),
     this.reverse('toUp')
   );
-  
-  this.transition(
-    this.childOf('slide-0'),
-    this.use('toDown'),
-    this.reverse('toUp')
-  );
-  
-  this.transition(
-    this.childOf('slide-1'),
-    this.use('toDown'),
-    this.reverse('toUp')
-  );
-  
-  this.transition(
-    this.childOf('slide-2'),
-    this.use('toDown'),
-    this.reverse('toUp')
-  );
-  
-  this.transition(
-    this.childOf('slide-3'),
-    this.use('toDown'),
-    this.reverse('toUp')
-  );
 
 }
