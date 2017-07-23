@@ -12,7 +12,7 @@ export default Ember.Component.extend({
   slides: computed( function() {
     return this.get('exhibit.photos').toArray()
   }),
-  showingSlides: computed('showingSlideIdx', function() {
+  showingSlides: computed('showingSlideIdx', 'currentSlideIdx', function() {
     var idx = this.get('showingSlideIdx')
     return this.get('slides').slice(idx, idx+4)
   }),
@@ -26,8 +26,9 @@ export default Ember.Component.extend({
     var difference = currentIdx - showingIdx
     if (difference >= 0 && difference <= 3) {
       return difference
+    } else {
+      return null
     }
-    return null
   }),
   currentSlide: computed( function() {
     return this.get('slides').toArray()[0]
@@ -47,12 +48,14 @@ export default Ember.Component.extend({
     && this.get('slides').length > 2
   }),
   actions: {
-    switchIdx: function(idx) {
-      this.set('currentSlideIdx', idx)
+    switchIdx: function(refIdx) {
+      this.set('currentSlideIdx', refIdx)
+      var currentSlide = this.get('slides')[refIdx]
       this.set('currentSlide', currentSlide)
     },
     switchIdxManually: function(idx) {
-      this.send('switchIdx', idx)
+      var showingIdx = this.get('showingSlideIdx')
+      this.send('switchIdx', idx+showingIdx)
       this.send('switchDelay')
     },
     switchDelay: function() {

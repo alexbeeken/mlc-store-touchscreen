@@ -40,19 +40,6 @@
 .ps-data {
 }
 
-.photo-link {
-    display: inline-block;
-  img {
-    width: auto;
-    height: 10vh;
-    max-width: 13vw;
-  }
-}
-
-.selected {
-  outline: 0.5vw solid $selected-color;
-}
-
 .photo-links {
   display: flex;
   align-content: center;
