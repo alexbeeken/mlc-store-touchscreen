@@ -5,6 +5,7 @@ const { service } = inject;
 
 const slideInterval = 6000;
 const switchDelayTime = 4000;
+const photoCount = 4
 
 export default Ember.Component.extend({
   exhibit: null,
@@ -14,7 +15,7 @@ export default Ember.Component.extend({
   }),
   showingSlides: computed('showingSlideIdx', 'currentSlideIdx', function() {
     var idx = this.get('showingSlideIdx')
-    return this.get('slides').slice(idx, idx+4)
+    return this.get('slides').slice(idx, idx+photoCount)
   }),
   currentSlideIdx: computed( function() {
     this.get('slides')[0]
@@ -24,7 +25,7 @@ export default Ember.Component.extend({
     var currentIdx = this.get('currentSlideIdx')
     var showingIdx = this.get('showingSlideIdx')
     var difference = currentIdx - showingIdx
-    if (difference >= 0 && difference <= 3) {
+    if (difference >= 0 && difference <= (photoCount - 1)) {
       return difference
     } else {
       return null
@@ -40,7 +41,7 @@ export default Ember.Component.extend({
     this.send('switchDelay');
   },
   showForwardArrow: computed('showingSlideIdx', function() {
-    return this.get('showingSlideIdx') < (this.get('slides').length - 4)
+    return this.get('showingSlideIdx') < (this.get('slides').length - photoCount)
     && this.get('slides').length > 2
   }),
   showBackArrow: computed('showingSlideIdx', function() {
