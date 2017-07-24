@@ -1,8 +1,8 @@
 export const brine =
 {
-  title: 'Rush Creek',
-  route: 'rush',
-  linkColor: '#79a33f',
+  title: '1980s Brine Shrimp Research',
+  route: 'brine',
+  linkColor: '#936ab7',
   slides: [
     {
       year: '1984',
