@@ -23,16 +23,4 @@ export default function(){
     this.use('fade'),
     this.reverse('fade')
   );
-
-  this.transition(
-    this.childOf('.selected .0'),
-    this.toValue(function(value){ value instanceof Photo }),
-    this.use('toLeft')
-  );
-
-  this.transition(
-    this.childOf('.unselected .0'),
-    this.toValue(function(value){ value instanceof Photo }),
-    this.use('toLeft')
-  );
 }
