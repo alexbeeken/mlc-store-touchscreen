@@ -72,11 +72,6 @@ export const study =
     {
       year: '1976',
       paragraph: ' ',
-      path: '/1976monolake3.jpg'
-    },
-    {
-      year: '1976',
-      paragraph: ' ',
       path: '/1976monolake5.jpg'
     },
     {
