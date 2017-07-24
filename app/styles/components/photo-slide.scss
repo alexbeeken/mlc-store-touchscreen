@@ -70,18 +70,19 @@
   }
 
   .ps-titles {
-    height: 25vh;
+    float: left;
     .ps-year {
-      float: left;
+      height: 8vh;
+      width: 100%;
     }
     .ps-data {
-      float: right;
+      height: 5vh;
+      width: 100%;
       margin-right: 10vw;
     }
     .ps-paragraph {
-      height: 25vh;
+      height: 15vh;
       width: 100%;
-      float: left;
       padding: 0px 20vw;
       h4 {
         font-size: 3.5vw;
