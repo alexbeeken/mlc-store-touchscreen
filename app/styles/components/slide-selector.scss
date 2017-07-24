@@ -16,19 +16,6 @@
   }
 }
 
-.photo-link {
-    display: inline-block;
-  img {
-    width: auto;
-    height: 10vh;
-    max-width: 13vw;
-  }
-}
-
-.selected {
-  outline: 0.5vw solid $selected-color;
-}
-
 .photo-links {
   display: flex;
   align-content: center;
@@ -55,18 +42,7 @@
     height: 15vh;
   }
 
-  .photo-link {
-    img {
-      width: auto;
-      height: 5vh;
-    }
-  }
-
   .photo-links-spacer {
     width: 70%;
-  }
-
-  .selected {
-    outline: 1vw solid $selected-color;
   }
 }
