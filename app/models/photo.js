@@ -6,6 +6,7 @@ export default Model.extend({
   year: DS.attr('string'),
   levelMeter: DS.attr('string'),
   levelFeet: DS.attr('string'),
+  paragraph: DS.attr('string'),
   path: DS.attr('string'),
   exhibit: DS.belongsTo('exhibit')
 });

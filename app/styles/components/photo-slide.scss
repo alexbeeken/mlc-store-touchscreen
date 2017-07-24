@@ -12,13 +12,22 @@
   }
 }
 
-.ps-photo {
+.ps-photo-centering {
   float: right;
+  padding-top: 3vh;
   height: 70vh;
   min-width: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ps-photo {
+  height: 100%;
+  width: 100%;
   background-repeat: no-repeat;
   background-size: contain;
-  background-position: top right;
+  background-position: center;
   margin: 1vw;
 }
 
@@ -31,6 +40,11 @@
   font-family: $data-font;
   h1 {
     font-weight: bold;
+  }
+  .ps-paragraph {
+    h4 {
+      font-size: 2vw;
+    }
   }
 }
 
@@ -56,13 +70,23 @@
   }
 
   .ps-titles {
-    height: 25vh;
+    float: left;
     .ps-year {
-      float: left;
+      height: 8vh;
+      width: 100%;
     }
     .ps-data {
-      float: right;
+      height: 5vh;
+      width: 100%;
       margin-right: 10vw;
+    }
+    .ps-paragraph {
+      height: 15vh;
+      width: 100%;
+      padding: 0px 20vw;
+      h4 {
+        font-size: 3.5vw;
+      }
     }
     width: 100%;
     text-align: center;

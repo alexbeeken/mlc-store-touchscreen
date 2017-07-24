@@ -22,6 +22,7 @@ export function initialize(appInstance) {
         levelMeter: photo.levelMeter,
         levelFeet: photo.levelFeet,
         path: photo.path,
+        paragraph: photo.paragraph,
         exhibit: exhibitRecords[index].id
       })
       exhibitRecords[index].get('photos').pushObject(photoRecord)

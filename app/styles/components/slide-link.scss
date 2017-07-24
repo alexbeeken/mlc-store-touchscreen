@@ -3,7 +3,7 @@
   img {
     width: auto;
     height: 10vh;
-    max-width: 13vw;
+    width: 10vw;
   }
 }
 
@@ -13,9 +13,10 @@
 
 .media-mobile {
   .photo-link {
+    margin: 0px 1vw;
     img {
-      width: auto;
-      height: 5vh;
+      width: 10vh;
+      height: 9vh;
     }
   }
 
