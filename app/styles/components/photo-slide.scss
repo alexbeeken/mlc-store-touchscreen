@@ -42,6 +42,8 @@
     font-weight: bold;
   }
   .ps-paragraph {
+    max-height: 46vh;
+    overflow: scroll;
     h4 {
       font-size: 2vw;
     }
