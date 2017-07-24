@@ -48,8 +48,8 @@ export const rush =
     },
     {
       year: '1986',
-      levelMeter: 'Late 80s',
-      paragraph: 'The Buoy Balance: One sampling day, the USGS team bet that I couldn't balance on one of the orange buoys we used on the lake. They were almost right. I was on the buoy for about a split second (just enough to capture the photo); the combination of the slippery, alkaline water (it was slicker than snot, excuse my language!) and the tippy nature of the buoy made it extremely difficult to stay on top. Needless to say, I was in the lake more than I was on the buoy. Photos Courtesy of Gayle Dana',
+      levelMeter: ' ',
+      paragraph: "The Buoy Balance: One sampling day, the USGS team bet that I couldn't balance on one of the orange buoys we used on the lake. They were almost right. I was on the buoy for about a split second (just enough to capture the photo); the combination of the slippery, alkaline water (it was slicker than snot, excuse my language!) and the tippy nature of the buoy made it extremely difficult to stay on top. Needless to say, I was in the lake more than I was on the buoy. Photos Courtesy of Gayle Dana",
       path: '/1986buoybalance.jpg'
     },
   ]
