@@ -7,7 +7,7 @@ export const brine =
     {
       year: '1984',
       levelMeter: 'July or August',
-      paragraph: "I used to go out on joint sampling trips with DWP in the early- to mid-80's. DWP took us out in their boat, the "Willit Run." On this particular summer morning in 1984 (either July or August), we took off from the boat ramp (SW shore) and within a minute of taking off, heard a big KaBam! The engine cover (inboard motor) blew off, 20 feet into the sky and the engine was on fire! We tried to put the fire out with a fire extinguisher (which we could not get to work!). As the fire starting spreading toward some spare tanks full of gas, we decided it was time to abandon ship. We all grabbed life jackets and swam to shore.",
+      paragraph: "I used to go out on joint sampling trips with DWP in the early- to mid-80's. DWP took us out in their boat, the 'Willit Run.' On this particular summer morning in 1984 (either July or August), we took off from the boat ramp (SW shore) and within a minute of taking off, heard a big KaBam! The engine cover (inboard motor) blew off, 20 feet into the sky and the engine was on fire! We tried to put the fire out with a fire extinguisher (which we could not get to work!). As the fire starting spreading toward some spare tanks full of gas, we decided it was time to abandon ship. We all grabbed life jackets and swam to shore.",
       path: '/1984burningboat1.jpg'
     },
     {
