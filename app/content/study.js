@@ -21,12 +21,12 @@ export const negit =
     },
     {
       year: '1976',
-      paragraph: 'John writes: A rattlesnake picked up in camp. Jeff Robins was sitting in a lawn chair reading when this snake approached him; he got up and moved off, and the snake went into someone's tent and crawled under the sleeping bag. The fellow holding the snake was someone from the chipmunk study; they also stayed on the creek in 1975 and 1976. I think his name was Tom, but I'm not sure.',
+      paragraph: "John writes: A rattlesnake picked up in camp. Jeff Robins was sitting in a lawn chair reading when this snake approached him; he got up and moved off, and the snake went into someone's tent and crawled under the sleeping bag. The fellow holding the snake was someone from the chipmunk study; they also stayed on the creek in 1975 and 1976. I think his name was Tom, but I'm not sure.",
       path: '/1976jhfangsm.jpg'
     },
     {
       year: '1976',
-      paragraph: 'John writes: The throne was constructed out in the sagebrush. I think a bird list was kept; in order to qualify for the list, the bird had to be seen while one's posterior was in contact with the seat.',
+      paragraph: "John writes: The throne was constructed out in the sagebrush. I think a bird list was kept; in order to qualify for the list, the bird had to be seen while one's posterior was in contact with the seat.",
       path: '/1976jhthronesm.jpg'
     },
     {
