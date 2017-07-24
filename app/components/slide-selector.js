@@ -4,8 +4,8 @@ const { inject, run, computed } = Ember
 const { service } = inject
 const { alias } = computed
 
-const slideInterval = 600000
-const switchDelayTime = 400000
+const slideInterval = 6000
+const switchDelayTime = 4000
 const photoCount = 4
 
 export default Ember.Component.extend({
