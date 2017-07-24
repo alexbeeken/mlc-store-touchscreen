@@ -1,4 +1,4 @@
-export const rush =
+export const brine =
 {
   title: 'Rush Creek',
   route: 'rush',
