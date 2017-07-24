@@ -12,13 +12,22 @@
   }
 }
 
-.ps-photo {
+.ps-photo-centering {
   float: right;
+  padding-top: 3vh;
   height: 70vh;
   min-width: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ps-photo {
+  height: 100%;
+  width: 100%;
   background-repeat: no-repeat;
   background-size: contain;
-  background-position: top right;
+  background-position: center;
   margin: 1vw;
 }
 
