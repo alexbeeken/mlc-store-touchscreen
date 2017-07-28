@@ -2,7 +2,6 @@ import Ember from 'ember'
 
 const { inject, run, computed } = Ember
 const { service } = inject
-const { alias } = computed
 
 const slideInterval = 6000
 const switchDelayTime = 4000
