@@ -3,8 +3,8 @@ import Ember from 'ember'
 const { inject, run, computed } = Ember
 const { service } = inject
 
-const slideInterval = 6000
-const switchDelayTime = 4000
+const slideInterval = 12000
+const switchDelayTime = 8000
 const photoCount = 4
 
 export default Ember.Component.extend({
