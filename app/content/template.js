@@ -1,4 +1,3 @@
-
 export const example =
 {
   title: 'Example Title',
