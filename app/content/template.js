@@ -1,7 +1,6 @@
 export const example =
 {
   title: 'Example Title',
-  route: 'example',
   linkColor: '#FFFFFF',
   slides: [
     {
